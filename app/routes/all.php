@@ -35,9 +35,9 @@ $app->post('/fight', function() use ($app) {
 		$app->flash('error', "Someone has to win, bro.");
 		$app->redirect($app->urlFor('home'));
 	}
-	$fightResult = !empty($playerWins) ? 'win' : (!empty($opponentWins) ? 'lose' : 'draw');
+	$fightResult = !empty($playerWins) ? 'win' : (!empty($opponentWins) ? 'lost' : 'draw');
 
-	$fight = Model_Fighter::addFight($playerId, $opponentId, $fightResult);
+	$fight = Model_Fight::add($playerId, $opponentId, $fightResult);
 
 	if ($fight) {
 		$app->flash('success', "Well played!");
