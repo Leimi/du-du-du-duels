@@ -1,7 +1,7 @@
 <?php
 
 $app->get('/', function() use ($app) {
-	$fighters = Model_Fighter::getFighters();
+	$fighters = Model_Fighter::getRandomFightersForADuelAtLeastAsEpicAsThisMethodName();
 	$fightersValues = array_values($fighters);
 	$fightersIds = array_keys($fighters);
 	$_SESSION['fighters'] = $fightersIds;
@@ -20,7 +20,7 @@ $app->post('/fight', function() use ($app) {
 		$app->redirect($app->urlFor('home'));
 	}
 
-	if (empty($originalFighters) || $playerId !== $originalFighters[0] || $opponentId !== $originalFighters[1]) {
+	if (empty($originalFighters) || (int) $playerId !== $originalFighters[0] || (int) $opponentId !== $originalFighters[1]) {
 		$app->flash('error', "I see what you did there.");
 		$app->redirect($app->urlFor('home'));
 	}
@@ -47,4 +47,8 @@ $app->post('/fight', function() use ($app) {
 
 $app->get('/bot/fillDB', function() use($app) {
 	require __DIR__.'/../../bot/fillDB.php';
+});
+
+$app->get('/bot/updateScores', function() use($app) {
+	Model_Fighter::updateScores();
 });
