@@ -12,7 +12,14 @@ class Halp {
 		return $url;
 	}
 
-	public function pluralize($word, $count) {
+	public static function pluralize($word, $count) {
 		return $word . ($count > 1 ? 's' : '');
+	}
+
+	public static function fighterImg($fighter) {
+		if (file_exists(WEBROOT_PATH.'/img/fighters/'.$fighter->name_.'.png'))
+			return '<img src="/img/fighters/'.$fighter->name_.'.png" alt="'.$fighter->name.'" />';
+		else
+			return '';
 	}
 }

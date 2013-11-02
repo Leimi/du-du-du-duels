@@ -2,7 +2,7 @@
 
 		<!-- dev : /js/script.js -->
 		<?php $js = PROD ? '/js/script.min.js?v=58797562341' :
-			array('/components/jquery/jquery.min.js', '/js/script.js');
+			array('/js/script.js');
 		$t = time();
 		if (is_string($js)): ?>
 		<script src="<?php echo $js ?>"></script>
