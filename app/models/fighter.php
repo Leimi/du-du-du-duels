@@ -33,5 +33,8 @@ class Model_Fighter extends RedBean_SimpleModel
 		R::exec('UPDATE fighter SET score = '.Elo::INITIAL_SCORE.' WHERE score IS NULL' );
 		die;
 	}
+
+	public static function top($number = 50) {
+		return R::find('fighter', ' fights > 0 ORDER BY score DESC limit '.$number);
 	}
 }

@@ -22,7 +22,7 @@ require APP_PATH.'/lib/halp.php';
 
 RedBean_Facade::setup("mysql:host=".DB_HOST.";dbname=".DB_NAME."", DB_USER, DB_PASSWORD);
 RedBean_Facade::freeze(PROD);
-RedBean_Facade::$writer->setUseCache(PROD);
+RedBean_Facade::$writer->setUseCache(true);
 
 $app = new \Slim\Slim(array(
 	'templates.path' => APP_PATH.'/views',

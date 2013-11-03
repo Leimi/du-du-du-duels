@@ -45,6 +45,11 @@ $app->post('/fight', function() use ($app) {
 	}
 })->name('post-fight');
 
+$app->get('/top', function() use ($app) {
+	$fighters = Model_Fighter::top();
+	$app->render('top.php', array('fighters' => $fighters));
+})->name('top');
+
 $app->get('/bot/fillDB', function() use($app) {
 	require __DIR__.'/../../bot/fillDB.php';
 });
