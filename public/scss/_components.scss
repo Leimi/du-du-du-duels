@@ -1,10 +1,8 @@
 .website-title {
+	opacity: 0.7;
 	color: $brown;
 	font-family: $base-font-family;
 	font-size: $base-font-size;
-	a {
-		color: $brown;
-	}
 }
 
 .header__title {
@@ -20,4 +18,26 @@
 
 .light-text {
 
+}
+
+.hearthstone-button {
+	font-family: $serif;
+	color: $brown;
+	border: 0;
+	background: none;
+}
+
+.box--green {
+	background: rgba($green, 0.1);
+	border-color: rgba(darken($green, 10%), 0.5);
+}
+
+.box--red {
+	background: rgba($red, 0.1);
+	border-color: rgba(darken($red, 10%), 0.5);
+}
+
+.box--yellow {
+	background: rgba($yellow, 0.1);
+	border-color: rgba(darken($yellow, 10%), 0.5);
 }

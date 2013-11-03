@@ -5,27 +5,44 @@
 	.fight__fighters {
 	}
 
-		.fighter {
+		.fighter,
+		.fight__between {
 			display: inline-block;
 			vertical-align: middle;
+		}
+
+		.fighter {
 			border-radius: 3px;
 			padding: 30px 10px;
-			&:hover,
-			&:focus {
-				background: rgba($brown, 0.2);
-			}
+			border: 1px solid transparent;
+		}
+
+		.fighter.fighter--winner {
+			@extend .box--green;
+		}
+
+		.fighter--loser {
+			opacity: 0.6;
+		}
+
+		.fighter.fighter--draw {
+			@extend .box--yellow;
 		}
 
 			.fighter__img-wrapper,
-			.fighter__more-info {
+			.fighter__more-info
+			.fight__vs-wrapper,
+			.fight__draw {
 				display: block;
 				text-align: center;
 			}
 
-			.fighter__img-wrapper {
+			.fighter__img-wrapper,
+			.fight__vs-wrapper {
 				overflow: hidden;
 				position: relative;
-				max-height: 434px;
+				height: 434px;
+				line-height: 434px;
 			}
 
 				.fighter__img {
@@ -33,15 +50,13 @@
 					top: -36px;
 				}
 
-		.fighter__vs {
-			display: inline-block;
-			vertical-align: middle;
-			width: 100px;
-			text-align: center;
-			font-family: $serif;
-			font-size: 3em;
-			font-style: italic;
-		}
+	.fight__vs {
+		width: 100px;
+		text-align: center;
+		font-family: $serif;
+		font-size: 3em;
+		font-style: italic;
+	}
 
 	.fight__draw {
 		display: inline-block;

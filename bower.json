@@ -1,5 +1,6 @@
 {
-	"name": "project",
-	"dependencies": {
-	}
+  "name": "project",
+  "dependencies": {
+    "jquery": "1.*"
+  }
 }

@@ -564,18 +564,13 @@ label {
 /* line 1, ../scss/_components.scss */
 
 .website-title {
+  opacity: 0.7;
   color: #69572e;
   font-family: Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
   font-size: 16px;
 }
 
-/* line 5, ../scss/_components.scss */
-
-.website-title a {
-  color: #69572e;
-}
-
-/* line 10, ../scss/_components.scss */
+/* line 8, ../scss/_components.scss */
 
 .header__title {
   font-size: 64px;
@@ -583,11 +578,43 @@ label {
   text-align: center;
 }
 
-/* line 16, ../scss/_components.scss */
+/* line 14, ../scss/_components.scss */
 
 .header__subtitle {
   font-family: Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
   font-size: 19.2px;
+}
+
+/* line 23, ../scss/_components.scss */
+
+.hearthstone-button {
+  font-family: Hearthstone, Georgia, 'DejaVu Serif', Norasi, serif;
+  color: #69572e;
+  border: 0;
+  background: none;
+}
+
+/* line 30, ../scss/_components.scss */
+
+.box--green,
+.fighter.fighter--winner {
+  background: rgba(30, 255, 0, 0.1);
+  border-color: rgba(24, 204, 0, 0.5);
+}
+
+/* line 35, ../scss/_components.scss */
+
+.box--red {
+  background: rgba(255, 64, 64, 0.1);
+  border-color: rgba(255, 13, 13, 0.5);
+}
+
+/* line 40, ../scss/_components.scss */
+
+.box--yellow,
+.fighter.fighter--draw {
+  background: rgba(255, 209, 0, 0.1);
+  border-color: rgba(204, 167, 0, 0.5);
 }
 
 /* line 1, ../scss/items/_nav.scss */
@@ -721,50 +748,58 @@ label {
   text-align: center;
 }
 
-/* line 8, ../scss/pages/_fight.scss */
+/* line 9, ../scss/pages/_fight.scss */
 
-.fighter {
+.fighter,
+.fight__between {
   display: inline-block;
   vertical-align: middle;
-  border-radius: 3px;
-  padding: 30px 10px;
 }
 
 /* line 14, ../scss/pages/_fight.scss */
 
-.fighter:hover,
-.fighter:focus {
-  background: rgba(105, 87, 46, 0.2);
+.fighter {
+  border-radius: 3px;
+  padding: 30px 10px;
+  border: 1px solid transparent;
 }
 
-/* line 20, ../scss/pages/_fight.scss */
+/* line 24, ../scss/pages/_fight.scss */
+
+.fighter--loser {
+  opacity: 0.6;
+}
+
+/* line 35, ../scss/pages/_fight.scss */
 
 .fighter__img-wrapper,
-.fighter__more-info {
+.fighter__more-info
+.fight__vs-wrapper,
+.fight__draw {
   display: block;
   text-align: center;
 }
 
-/* line 25, ../scss/pages/_fight.scss */
+/* line 41, ../scss/pages/_fight.scss */
 
-.fighter__img-wrapper {
+.fighter__img-wrapper,
+.fight__vs-wrapper {
   overflow: hidden;
   position: relative;
-  max-height: 434px;
+  height: 434px;
+  line-height: 434px;
 }
 
-/* line 31, ../scss/pages/_fight.scss */
+/* line 48, ../scss/pages/_fight.scss */
 
 .fighter__img {
   position: relative;
   top: -36px;
 }
 
-/* line 36, ../scss/pages/_fight.scss */
+/* line 53, ../scss/pages/_fight.scss */
 
-.fighter__vs {
-  display: inline-block;
-  vertical-align: middle;
+.fight__vs {
   width: 100px;
   text-align: center;
   font-family: Hearthstone, Georgia, 'DejaVu Serif', Norasi, serif;
@@ -772,7 +807,7 @@ label {
   font-style: italic;
 }
 
-/* line 46, ../scss/pages/_fight.scss */
+/* line 61, ../scss/pages/_fight.scss */
 
 .fight__draw {
   display: inline-block;
@@ -791,25 +826,24 @@ a {
   color: #222222;
   border-bottom: 1px solid #c79a34;
   text-decoration: none;
-  margin: 0 6px;
-  padding: 3px 0;
+  padding: 0 0 3px;
 }
 
-/* line 14, ../scss/_main.scss */
+/* line 11, ../scss/_main.scss */
 
 a:hover,
 a:focus {
   border-bottom: 0;
-  color: #69572e;
-  padding: 3px 6px;
-  margin: 0;
-  color: #f5f5f5;
-  border-radius: 3px;
-  background: #4b608b;
-  border-color: #39496a;
+  color: #0055ab;
 }
 
-/* line 26, ../scss/_main.scss */
+/* line 15, ../scss/_main.scss */
+
+a:active {
+  color: #003c78;
+}
+
+/* line 20, ../scss/_main.scss */
 
 h1,
 h2,
@@ -821,7 +855,7 @@ h6 {
   font-family: Hearthstone, Georgia, 'DejaVu Serif', Norasi, serif;
 }
 
-/* line 31, ../scss/_main.scss */
+/* line 25, ../scss/_main.scss */
 
 #footer {
   margin: 100px auto 20px;
