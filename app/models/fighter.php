@@ -13,14 +13,25 @@ class Model_Fighter extends RedBean_SimpleModel
 	}
 
 	public static function getRandomFightersForADuelAtLeastAsEpicAsThisMethodName() {
-		return R::findAll('fighter', ' ORDER BY RAND() LIMIT 2');
+		$first = R::findOne('fighter', ' ORDER BY RAND()');
+		$second = R::findOne('fighter', ' id <> ? AND fights < (SELECT AVG(fights) from fighter)', array($first->id));
+		return array($first->id => $first, $second->id => $second);
 	}
 
 	public static function updateScores() {
 		$activeFights = R::getCol("SELECT id FROM fight WHERE active = 1");
-		R::exec('UPDATE fighter as ft SET ft.score = ('.Elo::INITIAL_SCORE.' +
-			(SELECT SUM(fd.score_diff) FROM fightdetails as fd WHERE ft.id = fd.player_id AND fd.fight_id IN ('.implode(',', $activeFights).'))
-		)');
+		$activeTrueFights = R::getCol("SELECT id FROM fight WHERE active = 1 and is_reset IS NULL");
+		$query = '
+			UPDATE fighter as ft
+			SET
+				ft.score = ('.Elo::INITIAL_SCORE.' + (SELECT SUM(fd.score_diff) FROM fightdetails as fd WHERE ft.id = fd.player_id AND fd.fight_id IN ('.implode(',', $activeFights).'))),
+				ft.fights = (SELECT COUNT(*) FROM fightdetails as fd WHERE ft.id = fd.player_id AND fd.fight_id IN ('.implode(',', $activeTrueFights).')),
+				ft.wins = (SELECT COUNT(*) FROM fightdetails as fd WHERE result = 1 AND ft.id = fd.player_id AND fd.fight_id IN ('.implode(',', $activeTrueFights).')),
+				ft.losts = (SELECT COUNT(*) FROM fightdetails as fd WHERE result = 0 AND ft.id = fd.player_id AND fd.fight_id IN ('.implode(',', $activeTrueFights).')),
+				ft.draws = (SELECT COUNT(*) FROM fightdetails as fd WHERE result = 0.5 AND ft.id = fd.player_id AND fd.fight_id IN ('.implode(',', $activeTrueFights).'))';
+		R::exec($query);
 		R::exec('UPDATE fighter SET score = '.Elo::INITIAL_SCORE.' WHERE score IS NULL' );
+		die;
+	}
 	}
 }

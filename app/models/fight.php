@@ -50,20 +50,30 @@ class Model_Fight extends RedBean_SimpleModel
 		$playerFight->player_id = $playerId;
 		$playerFight->opponent_id = $opponentId;
 		$playerFight->score_diff = $newPlayerScore - $playerScore;
-		$playerFight->fights_nb++;
 		$playerFight->result = self::$resultsKeys[$result];
-		$playerFight->{$result.'s_nb'}++;
+		$player->fights++;
+		$player->{$result.'s'}++;
+		$player->score = $newPlayerScore;
 
 		$opponentFight->player_id = $opponentId;
 		$opponentFight->opponent_id = $playerId;
 		$opponentFight->score_diff = $newOpponentScore - $opponentScore;
-		$opponentFight->fights_nb++;
 		$opponentFight->result = self::$resultsKeys[$opponentResult];
-		$opponentFight->{$opponentResult.'s_nb'}++;
+		$opponent->fights++;
+		$opponent->{$opponentResult.'s'}++;
+		$opponent->score = $newOpponentScore;
 
 		$fight->ownFightdetails = array($playerFight, $opponentFight);
 
-		$fightId = R::store($fight);
+		R::begin();
+		try {
+			$fightId = R::store($fight);
+			R::store($player);
+			R::store($opponent);
+			R::commit();
+		} catch(Exception $e) {
+			R::rollback();
+		}
 
 		return !empty($fightId);
 	}
