@@ -38,8 +38,8 @@ module.exports = function(grunt) {
 		// we livereload when html/css/js is changed
 		watch: {
 			sass: {
-				files: [folder + '/scss/*.scss'],
-				tasks: ['compass:dev']
+				files: [folder + '/scss/**/*.scss'],
+				tasks: ['compass:dev', 'autoprefixer:dev']
 			},
 			css: {
 				files: ['*.css']
@@ -81,6 +81,20 @@ module.exports = function(grunt) {
 			}
 		},
 
+		autoprefixer: {
+			options: {
+				browsers: ['last 2 versions', 'ie 8', 'android 2.3', 'ff 17']
+			},
+			dev: {
+				src: folder + "/css/style.css",
+				dest: folder + "/css/style.css"
+			},
+			dist: {
+				src: distFolder + "/style.css",
+				dest: distFolder + "/style.css"
+			}
+		},
+
 		connect: {
 			livereload: {
 				options: {
@@ -110,5 +124,5 @@ module.exports = function(grunt) {
 		'connect:livereload',
 		'watch'
 	]);
-	grunt.registerTask('default', ['concat', 'uglify', 'cssmin']);
+	grunt.registerTask('build', ['compass:dist', 'autoprefixer:dist', 'concat', 'uglify', 'cssmin']);
 };
