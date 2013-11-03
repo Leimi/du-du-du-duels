@@ -10,7 +10,7 @@
 			<input type="hidden" name="<?php echo $type[$fighterKey] ?>_id" value="<?php echo $fighter->id ?>" />
 
 			<div class="fighter__img-wrapper">
-				<input type="image" src="<?php echo Halp::fighterImgPath($fighter); ?>" alt="<?php echo $fighter->name ?>" name="<?php echo $type[$fighterKey] ?>_wins" title="<?php echo $fighter->name ?> wins!" class="fighter__img" value="<?php echo $fighter->name ?>" />
+				<input type="image" src="<?php echo Halp::fighterImgPath($fighter); ?>" alt="<?php echo $fighter->name ?>" name="<?php echo $type[$fighterKey] ?>_wins" title="<?php echo $fighter->name ?> is obviously better!" class="fighter__img" value="<?php echo $fighter->name ?>" />
 			</div>
 
 			<div class="fighter__more-info">
@@ -23,6 +23,10 @@
 				<input type="submit" name="draw" title="Choosing is too difficult, I call it a draw!" class="fight__draw hearthstone-button" value="Draw" />
 			</div>
 		</div><?php endif ?><?php endforeach ?>
+	</div>
+
+	<div class="fight__skip">
+		<a href="<?php echo $app->urlFor('fight') ?>">Skip this duel</a>
 	</div>
 
 

@@ -41,3 +41,7 @@
 	background: rgba($yellow, 0.1);
 	border-color: rgba(darken($yellow, 10%), 0.5);
 }
+
+.transition {
+	transition: all 0.1s linear;
+}

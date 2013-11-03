@@ -1,0 +1,18 @@
+td[data-score] {
+
+}
+td[data-wins] {
+	color: darken($green, 10%);
+}
+td[data-losts] {
+	color: darken($red, 10%);
+}
+td[data-draws] {
+	color: darken($yellow, 10%);
+}
+
+td[data-wins="0"],
+td[data-losts="0"],
+td[data-draws="0"] {
+	opacity: 0.5;
+}

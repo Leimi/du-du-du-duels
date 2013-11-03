@@ -1,3 +1,6 @@
+@charset "UTF-8";
+
+
 @font-face {
   font-family: 'Hearthstone';
   src: url("../fonts/belwe_bd_bt_bold-webfont.eot");
@@ -617,138 +620,153 @@ label {
   border-color: rgba(204, 167, 0, 0.5);
 }
 
-/* line 1, ../scss/items/_nav.scss */
+/* line 45, ../scss/_components.scss */
 
-.nav {
-  margin: 0.7 0;
-  padding: 0.35;
-  text-align: center;
-  border: 2px solid rgba(255, 255, 255, 0.25);
-  border-left: 0;
-  border-right: 0;
-  position: relative;
-  z-index: 100;
+.transition,
+.fighter {
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
 }
 
-/* line 10, ../scss/items/_nav.scss */
+/* http://knacss.com/ yabon (couleurs modifiées) ! */
 
-.nav .nav__title {
-  position: absolute;
-  top: 0.35;
-  bottom: 0.35;
-  left: 0.35;
-  font-size: .8em;
-  font-weight: normal;
-  line-height: 1.4;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
-  opacity: 0.9;
-  width: 170px;
-  margin: 0;
-  padding: 0;
+/* ----------------------------- */
+
+/* ==tables                      */
+
+/* ----------------------------- */
+
+/* line 7, ../scss/components/_tables.scss */
+
+table,
+.table {
+  max-width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  vertical-align: top;
+}
+
+/* line 13, ../scss/components/_tables.scss */
+
+table {
+  width: 100%;
+}
+
+/* line 16, ../scss/components/_tables.scss */
+
+.table {
+  display: table;
+}
+
+/* line 20, ../scss/components/_tables.scss */
+
+table#recaptcha_table,
+table.table-auto {
+  table-layout: auto;
+}
+
+/* line 23, ../scss/components/_tables.scss */
+
+caption {
+  padding: 10px;
+  color: #555;
+  font-style: italic;
+}
+
+/* line 28, ../scss/components/_tables.scss */
+
+table {
+  border: 1px solid #dec283;
+}
+
+/* line 31, ../scss/components/_tables.scss */
+
+tr > * + * {
+  border-left: 1px solid #dec283;
+}
+
+/* line 35, ../scss/components/_tables.scss */
+
+th,
+td {
+  padding: .3em .8em;
+  text-align: left;
+  border-bottom: 1px solid #dec283;
+}
+
+/* alternate tables */
+
+/* line 42, ../scss/components/_tables.scss */
+
+.alternate {
   border: 0;
-  background: none;
 }
 
-@media only screen and (max-width: 640px) {
-  /* line 10, ../scss/items/_nav.scss */
+/* line 43, ../scss/components/_tables.scss */
 
-  .nav .nav__title {
-    width: auto;
-    position: relative;
-    top: auto;
-    bottom: auto;
-    left: auto;
-  }
+.alternate tbody {
+  border: 1px solid #dec283;
 }
 
-/* line 32, ../scss/items/_nav.scss */
+/* line 46, ../scss/components/_tables.scss */
 
-.nav li {
-  display: inline-block;
-  margin: 0 1.4;
-  text-align: center;
-  position: relative;
+.alternate thead tr > * + * {
+  border-left: 0;
 }
 
-/* line 37, ../scss/items/_nav.scss */
+/* line 49, ../scss/components/_tables.scss */
 
-.nav li:first-child {
-  position: static;
+.alternate tbody tr > * + * {
+  border-left: 1px solid #dec283;
 }
 
-@media only screen and (max-width: 640px) {
-  /* line 32, ../scss/items/_nav.scss */
+/* alternate-vert tables */
 
-  .nav li {
-    margin-top: 0.23333;
-    margin-bottom: 0.23333;
-  }
+/* line 54, ../scss/components/_tables.scss */
+
+.alternate-vert {
+  border: 0;
+  border-right: 1px solid #dec283;
 }
 
-/* line 45, ../scss/items/_nav.scss */
+/* line 58, ../scss/components/_tables.scss */
 
-.nav a {
-  display: block;
+.alternate-vert tr > :first-child {
+  border-bottom: 0;
 }
 
-/* line 47, ../scss/items/_nav.scss */
+/* line 61, ../scss/components/_tables.scss */
 
-.nav a.current {
-  text-decoration: underline;
+.alternate-vert tr > * + * {
+  border-top: 1px solid #dec283;
 }
 
-/* line 50, ../scss/items/_nav.scss */
+/* striped tables */
 
-.nav a.button,
-.nav a {
-  margin: 0;
+/* line 66, ../scss/components/_tables.scss */
+
+.striped tbody tr:nth-child(odd) {
+  background: #eee;
+  background: rgba(0, 0, 0, 0.05);
 }
 
-/* line 53, ../scss/items/_nav.scss */
+/* striped-vert tables */
 
-.nav a:hover + .dropdown {
-  display: block;
-}
+/* line 72, ../scss/components/_tables.scss */
 
-/* line 57, ../scss/items/_nav.scss */
-
-.nav .dropdown {
-  display: none;
-  position: absolute;
-  left: 0;
-  right: 0;
-  padding-top: 1.4;
-}
-
-/* line 63, ../scss/items/_nav.scss */
-
-.nav .dropdown:hover {
-  display: block;
-}
-
-/* line 66, ../scss/items/_nav.scss */
-
-.nav .dropdown a {
-  margin: 0;
-  white-space: normal;
-}
-
-@media only screen and (max-width: 640px) {
-  /* line 1, ../scss/items/_nav.scss */
-
-  .nav {
-    padding-left: 0;
-    text-align: center;
-  }
+.striped-vert tr > :first-child {
+  background: #eee;
+  background: rgba(0, 0, 0, 0.05);
 }
 
 /* line 1, ../scss/pages/_fight.scss */
 
 .fight {
   text-align: center;
+  display: inline-block;
 }
 
-/* line 9, ../scss/pages/_fight.scss */
+/* line 10, ../scss/pages/_fight.scss */
 
 .fighter,
 .fight__between {
@@ -756,7 +774,7 @@ label {
   vertical-align: middle;
 }
 
-/* line 14, ../scss/pages/_fight.scss */
+/* line 15, ../scss/pages/_fight.scss */
 
 .fighter {
   border-radius: 3px;
@@ -764,13 +782,19 @@ label {
   border: 1px solid transparent;
 }
 
-/* line 24, ../scss/pages/_fight.scss */
+/* line 26, ../scss/pages/_fight.scss */
 
 .fighter--loser {
   opacity: 0.6;
 }
 
-/* line 35, ../scss/pages/_fight.scss */
+/* line 30, ../scss/pages/_fight.scss */
+
+.fighter.fighter--draw {
+  opacity: 0.8;
+}
+
+/* line 38, ../scss/pages/_fight.scss */
 
 .fighter__img-wrapper,
 .fighter__more-info
@@ -780,7 +804,7 @@ label {
   text-align: center;
 }
 
-/* line 41, ../scss/pages/_fight.scss */
+/* line 44, ../scss/pages/_fight.scss */
 
 .fighter__img-wrapper,
 .fight__vs-wrapper {
@@ -790,28 +814,61 @@ label {
   line-height: 434px;
 }
 
-/* line 48, ../scss/pages/_fight.scss */
+/* line 51, ../scss/pages/_fight.scss */
 
 .fighter__img {
   position: relative;
   top: -36px;
 }
 
-/* line 53, ../scss/pages/_fight.scss */
+/* line 60, ../scss/pages/_fight.scss */
 
 .fight__vs {
   width: 100px;
   text-align: center;
   font-family: Hearthstone, Georgia, 'DejaVu Serif', Norasi, serif;
   font-size: 3em;
-  font-style: italic;
 }
 
-/* line 61, ../scss/pages/_fight.scss */
+/* line 67, ../scss/pages/_fight.scss */
 
 .fight__draw {
   display: inline-block;
   margin: 0 auto;
+}
+
+/* line 72, ../scss/pages/_fight.scss */
+
+.fight__skip {
+  float: right;
+  margin: 30px 0;
+  font-size: 12.8px;
+}
+
+/* line 4, ../scss/pages/_top.scss */
+
+td[data-wins] {
+  color: #18cc00;
+}
+
+/* line 7, ../scss/pages/_top.scss */
+
+td[data-losts] {
+  color: #ff0d0d;
+}
+
+/* line 10, ../scss/pages/_top.scss */
+
+td[data-draws] {
+  color: #cca700;
+}
+
+/* line 16, ../scss/pages/_top.scss */
+
+td[data-wins="0"],
+td[data-losts="0"],
+td[data-draws="0"] {
+  opacity: 0.5;
 }
 
 /* line 1, ../scss/_main.scss */
@@ -820,7 +877,15 @@ body {
   background: #e9d6ab;
 }
 
-/* line 5, ../scss/_main.scss */
+@media only screen and (min-width: 1300px) {
+  /* line 1, ../scss/_main.scss */
+
+  body {
+    padding-top: 20px;
+  }
+}
+
+/* line 8, ../scss/_main.scss */
 
 a {
   color: #222222;
@@ -829,7 +894,7 @@ a {
   padding: 0 0 3px;
 }
 
-/* line 11, ../scss/_main.scss */
+/* line 14, ../scss/_main.scss */
 
 a:hover,
 a:focus {
@@ -837,13 +902,13 @@ a:focus {
   color: #0055ab;
 }
 
-/* line 15, ../scss/_main.scss */
+/* line 18, ../scss/_main.scss */
 
 a:active {
   color: #003c78;
 }
 
-/* line 20, ../scss/_main.scss */
+/* line 23, ../scss/_main.scss */
 
 h1,
 h2,
@@ -855,9 +920,34 @@ h6 {
   font-family: Hearthstone, Georgia, 'DejaVu Serif', Norasi, serif;
 }
 
-/* line 25, ../scss/_main.scss */
+/* line 28, ../scss/_main.scss */
+
+#container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* line 33, ../scss/_main.scss */
 
 #footer {
-  margin: 100px auto 20px;
+  margin: 200px auto 20px;
   text-align: center;
+}
+
+@media only screen and (min-width: 1300px) {
+  /* line 33, ../scss/_main.scss */
+
+  #footer {
+    margin: 3px;
+    text-align: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+/* line 44, ../scss/_main.scss */
+
+#footer h1 {
+  margin: 0;
 }

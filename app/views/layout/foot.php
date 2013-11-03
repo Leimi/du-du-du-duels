@@ -1,7 +1,7 @@
 		</div>
 
 		<div id="footer">
-			<h1 class="website-title">Hearthstone cards duels: fight! <a href="<?php echo $app->urlFor('home') ?>">Choose the best cards</a> and <a href="<?php echo $app->urlFor('top') ?>">see their rank</a>.</h1>
+			<h1 class="website-title">Hearthstone cards duels: fight! <a href="<?php echo $app->urlFor('fight') ?>">Choose the best cards</a> and <a href="<?php echo $app->urlFor('top') ?>">see their rank</a>.</h1>
 		</div>
 
 		<script src="http://static.wowhead.com/widgets/power.js"></script>

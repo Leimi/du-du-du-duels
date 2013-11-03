@@ -1,5 +1,6 @@
 .fight {
 	text-align: center;
+	display: inline-block;
 }
 
 	.fight__fighters {
@@ -15,6 +16,7 @@
 			border-radius: 3px;
 			padding: 30px 10px;
 			border: 1px solid transparent;
+			@extend .transition;
 		}
 
 		.fighter.fighter--winner {
@@ -26,6 +28,7 @@
 		}
 
 		.fighter.fighter--draw {
+			opacity: 0.8;
 			@extend .box--yellow;
 		}
 
@@ -50,15 +53,24 @@
 					top: -36px;
 				}
 
-	.fight__vs {
-		width: 100px;
-		text-align: center;
-		font-family: $serif;
-		font-size: 3em;
-		font-style: italic;
+	.fight__between {
+
 	}
 
-	.fight__draw {
-		display: inline-block;
-		margin: 0 auto;
+		.fight__vs {
+			width: 100px;
+			text-align: center;
+			font-family: $serif;
+			font-size: 3em;
+		}
+
+		.fight__draw {
+			display: inline-block;
+			margin: 0 auto;
+		}
+
+	.fight__skip {
+		float: right;
+		margin: 30px 0;
+		font-size: $base-font-size*0.8;
 	}
