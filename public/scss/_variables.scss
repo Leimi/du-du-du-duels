@@ -4,6 +4,8 @@
 $base-color: #222;
 
 $sand: #e9d6ab;
+$dark-sand: darken($sand, 30%);
+$brown: #69572E;
 $blue: darken(#546B9C, 5%);
 
 //fonts
@@ -12,5 +14,5 @@ $sans-serif: unquote("Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif"
 $monospace: unquote("Consolas, Monaco, 'Liberation Mono', 'Courier New', Courier, monospace");
 $base-font-family: $sans-serif;
 $base-font-size-px: 16px;
-$base-font-size: em($base-font-size-px);
-$base-line-height: em(21px);
+$base-font-size: $base-font-size-px;
+$base-line-height: 1.4;

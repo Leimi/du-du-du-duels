@@ -1,0 +1,23 @@
+.website-title {
+	color: $brown;
+	font-family: $base-font-family;
+	font-size: $base-font-size;
+	a {
+		color: $brown;
+	}
+}
+
+.header__title {
+	font-size: $base-font-size*4;
+	margin: 0.4em auto;
+	text-align: center;
+}
+
+	.header__subtitle {
+		font-family: $base-font-family;
+		font-size: $base-font-size*1.2;
+	}
+
+.light-text {
+
+}

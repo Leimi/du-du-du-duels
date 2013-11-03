@@ -3,18 +3,32 @@ body {
 }
 
 a {
-	color: $blue;
+	color: $base-color;
+	// background: rgba(darken($sand, 20%), 0.5);
+	// border: 1px solid rgba(darken($sand, 20%), 0.75);
+	border-bottom: 1px solid $dark-sand;
 	text-decoration: none;
-	border-radius: 3px;
-	padding: 3px 6px;
+	margin: 0 6px;
+	padding: 3px 0;
 	&:hover,
 	&:focus {
+		border-bottom: 0;
+		color: $brown;
+		padding: 3px 6px;
+		margin: 0;
 		color: #f5f5f5;
+		border-radius: 3px;
 		background: $blue;
+		border-color: darken($blue, 10%);
 	}
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight: normal;
 	font-family: $serif;
+}
+
+#footer {
+	margin: 100px auto 20px;
+	text-align: center;
 }

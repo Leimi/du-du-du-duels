@@ -1,96 +1,829 @@
-* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+@font-face {
+  font-family: 'Hearthstone';
+  src: url("../fonts/belwe_bd_bt_bold-webfont.eot");
+  src: url("../fonts/belwe_bd_bt_bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/belwe_bd_bt_bold-webfont.woff") format("woff"), url("../fonts/belwe_bd_bt_bold-webfont.ttf") format("truetype"), url("../fonts/belwe_bd_bt_bold-webfont.svg#belwe_bd_btbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 
-audio, canvas, video { display: inline-block; }
+@font-face {
+  font-family: 'icons';
+  src: url("../fonts/icons.eot");
+  src: url("../fonts/icons.eot?#iefix") format("embedded-opentype"), url("../fonts/icons.ttf") format("truetype"), url("../fonts/icons.woff") format("woff"), url("../fonts/icons.svg#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 
-audio:not([controls]) { display: none; height: 0; }
+/* line 12, ../scss/_icons.scss */
 
-[hidden] { display: none; }
+[class*="icon-"] {
+  font-family: 'icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-html { font-family: sans-serif; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; height: 100%; }
+/* line 26, ../scss/_icons.scss */
 
-body { margin: 0; height: 100%; }
+.icon-home:before {
+  content: "\e600";
+}
 
-a:focus { outline: thin dotted; }
+/* line 29, ../scss/_icons.scss */
 
-a:active, a:hover { outline: 0; }
+.icon-home2:before {
+  content: "\e601";
+}
 
-h1 { font-size: 2em; margin: 0.67em 0; }
+/* line 32, ../scss/_icons.scss */
 
-abbr[title] { border-bottom: 1px dotted; }
+.icon-close:before {
+  content: "\e602";
+}
 
-b, strong { font-weight: bold; }
+/* line 35, ../scss/_icons.scss */
 
-code, kbd, pre, samp { font-family: monospace, serif; font-size: 1em; }
+.icon-checkmark:before {
+  content: "\e603";
+}
 
-pre { white-space: pre-wrap; }
+/* line 38, ../scss/_icons.scss */
 
-q { quotes: "\201C" "\201D" "\2018" "\2019"; }
+.icon-checkmark2:before {
+  content: "\e604";
+}
 
-small { font-size: 80%; }
+/* line 41, ../scss/_icons.scss */
 
-sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+.icon-minus:before {
+  content: "\e605";
+}
 
-sup { top: -0.5em; }
+/* line 44, ../scss/_icons.scss */
 
-sub { bottom: -0.25em; }
+.icon-plus:before {
+  content: "\e606";
+}
 
-img { border: 0; }
+/* line 47, ../scss/_icons.scss */
 
-svg:not(:root) { overflow: hidden; }
+.icon-facebook:before {
+  content: "\e608";
+}
 
-fieldset { border: 1px solid silver; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
+/* line 50, ../scss/_icons.scss */
 
-legend { border: 0; padding: 0; }
+.icon-twitter:before {
+  content: "\e609";
+}
 
-button, input, select, textarea { font-family: inherit; font-size: 100%; margin: 0; }
+/* line 53, ../scss/_icons.scss */
 
-button, input { line-height: normal; }
+.icon-reddit:before {
+  content: "\e60a";
+}
 
-button, select { text-transform: none; }
+/* line 56, ../scss/_icons.scss */
 
-button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; cursor: pointer; }
+.icon-arrow-up:before {
+  content: "\e60b";
+}
 
-button[disabled], html input[disabled] { cursor: default; }
+/* line 59, ../scss/_icons.scss */
 
-input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; }
+.icon-arrow-right:before {
+  content: "\e60c";
+}
 
-input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+/* line 62, ../scss/_icons.scss */
 
-input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+.icon-arrow-down:before {
+  content: "\e60d";
+}
 
-button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+/* line 65, ../scss/_icons.scss */
 
-textarea { overflow: auto; vertical-align: top; }
+.icon-arrow-left:before {
+  content: "\e60e";
+}
 
-table { border-collapse: collapse; border-spacing: 0; }
+/* line 68, ../scss/_icons.scss */
 
-body, button, select, input, textarea, label { color: #222222; font-family: Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif; line-height: 1.3125em; }
+.icon-warning:before {
+  content: "\e60f";
+}
 
-.ir { border: 0; overflow: hidden; *text-indent: -9999px; }
-.ir:before { content: ""; display: block; width: 0; height: 100%; }
+/* line 71, ../scss/_icons.scss */
 
-.hidden { display: none !important; visibility: hidden; }
+.icon-spam:before {
+  content: "\e610";
+}
 
-.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
-.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+/* line 74, ../scss/_icons.scss */
 
-.invisible { visibility: hidden; }
+.icon-checkmark-circle:before {
+  content: "\e611";
+}
 
-.clearfix:before, .clearfix:after { content: " "; display: table; }
-.clearfix:after { clear: both; }
-.clearfix { *zoom: 1; }
+/* line 77, ../scss/_icons.scss */
 
-@media only screen and (max-width: 640px) { .no-small { display: none !important; visibility: hidden; } }
+.icon-cancel-circle:before {
+  content: "\e612";
+}
 
-@media only screen and (min-width: 641px) and (max-width: 979px) { .no-medium { display: none !important; visibility: hidden; } }
+/* line 80, ../scss/_icons.scss */
 
-@media only screen and (min-width: 980px) { .no-large { display: none !important; visibility: hidden; } }
+.icon-small-arrow-up-right:before {
+  content: "\e607";
+}
 
-@media only screen and (min-width: 641px) and (max-width: 979px) { .only-small { display: none !important; visibility: hidden; } }
-@media only screen and (min-width: 980px) { .only-small { display: none !important; visibility: hidden; } }
+/* line 83, ../scss/_icons.scss */
 
-@media only screen and (max-width: 640px) { .only-medium { display: none !important; visibility: hidden; } }
-@media only screen and (min-width: 980px) { .only-medium { display: none !important; visibility: hidden; } }
+.icon-info:before {
+  content: "\e613";
+}
 
-@media only screen and (max-width: 640px) { .only-large { display: none !important; visibility: hidden; } }
-@media only screen and (min-width: 641px) and (max-width: 979px) { .only-large { display: none !important; visibility: hidden; } }
+/* line 4, ../scss/_base.scss */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 8, ../scss/_base.scss */
+
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/* line 12, ../scss/_base.scss */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 17, ../scss/_base.scss */
+
+[hidden] {
+  display: none;
+}
+
+/* line 21, ../scss/_base.scss */
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* line 27, ../scss/_base.scss */
+
+body {
+  margin: 0;
+}
+
+/* line 31, ../scss/_base.scss */
+
+a:focus {
+  outline: thin dotted;
+}
+
+/* line 35, ../scss/_base.scss */
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* line 39, ../scss/_base.scss */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 44, ../scss/_base.scss */
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 48, ../scss/_base.scss */
+
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 52, ../scss/_base.scss */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/* line 57, ../scss/_base.scss */
+
+pre {
+  white-space: pre-wrap;
+}
+
+/* line 61, ../scss/_base.scss */
+
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/* line 65, ../scss/_base.scss */
+
+small {
+  font-size: 80%;
+}
+
+/* line 69, ../scss/_base.scss */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 76, ../scss/_base.scss */
+
+sup {
+  top: -0.5em;
+}
+
+/* line 80, ../scss/_base.scss */
+
+sub {
+  bottom: -0.25em;
+}
+
+/* line 84, ../scss/_base.scss */
+
+img {
+  border: 0;
+}
+
+/* line 88, ../scss/_base.scss */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 92, ../scss/_base.scss */
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/* line 98, ../scss/_base.scss */
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+/* line 103, ../scss/_base.scss */
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+/* line 109, ../scss/_base.scss */
+
+button,
+input {
+  line-height: normal;
+}
+
+/* line 113, ../scss/_base.scss */
+
+button,
+select {
+  text-transform: none;
+}
+
+/* line 117, ../scss/_base.scss */
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* line 122, ../scss/_base.scss */
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/* line 126, ../scss/_base.scss */
+
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* line 131, ../scss/_base.scss */
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* line 138, ../scss/_base.scss */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 142, ../scss/_base.scss */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 147, ../scss/_base.scss */
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+/* line 152, ../scss/_base.scss */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 157, ../scss/_base.scss */
+
+body,
+button,
+select,
+input,
+textarea,
+label {
+  color: #222222;
+  font-family: Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
+  line-height: 1.4;
+}
+
+/* line 3, ../scss/_helpers.scss */
+
+.ir {
+  border: 0;
+  overflow: hidden;
+  *text-indent: -9999px;
+}
+
+/* line 28, ../scss/_mixins.scss */
+
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%;
+}
+
+/* line 7, ../scss/_helpers.scss */
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/* line 11, ../scss/_helpers.scss */
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* line 62, ../scss/_mixins.scss */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/* line 15, ../scss/_helpers.scss */
+
+.invisible {
+  visibility: hidden;
+}
+
+/* line 78, ../scss/_mixins.scss */
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+/* line 82, ../scss/_mixins.scss */
+
+.cf:after {
+  clear: both;
+}
+
+/* line 83, ../scss/_mixins.scss */
+
+.cf {
+  *zoom: 1;
+}
+
+@media only screen and (max-width: 640px) {
+  /* line 23, ../scss/_helpers.scss */
+
+  .no-small {
+    display: none !important;
+    visibility: hidden;
+  }
+}
+
+@media only screen and (min-width: 641px) and (max-width: 979px) {
+  /* line 29, ../scss/_helpers.scss */
+
+  .no-medium {
+    display: none !important;
+    visibility: hidden;
+  }
+}
+
+@media only screen and (min-width: 980px) {
+  /* line 35, ../scss/_helpers.scss */
+
+  .no-large {
+    display: none !important;
+    visibility: hidden;
+  }
+}
+
+@media only screen and (min-width: 641px) and (max-width: 979px) {
+  /* line 41, ../scss/_helpers.scss */
+
+  .only-small {
+    display: none !important;
+    visibility: hidden;
+  }
+}
+
+@media only screen and (min-width: 980px) {
+  /* line 41, ../scss/_helpers.scss */
+
+  .only-small {
+    display: none !important;
+    visibility: hidden;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  /* line 50, ../scss/_helpers.scss */
+
+  .only-medium {
+    display: none !important;
+    visibility: hidden;
+  }
+}
+
+@media only screen and (min-width: 980px) {
+  /* line 50, ../scss/_helpers.scss */
+
+  .only-medium {
+    display: none !important;
+    visibility: hidden;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  /* line 59, ../scss/_helpers.scss */
+
+  .only-large {
+    display: none !important;
+    visibility: hidden;
+  }
+}
+
+@media only screen and (min-width: 641px) and (max-width: 979px) {
+  /* line 59, ../scss/_helpers.scss */
+
+  .only-large {
+    display: none !important;
+    visibility: hidden;
+  }
+}
+
+/* line 1, ../scss/_components.scss */
+
+.website-title {
+  color: #69572e;
+  font-family: Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
+  font-size: 16px;
+}
+
+/* line 5, ../scss/_components.scss */
+
+.website-title a {
+  color: #69572e;
+}
+
+/* line 10, ../scss/_components.scss */
+
+.header__title {
+  font-size: 64px;
+  margin: 0.4em auto;
+  text-align: center;
+}
+
+/* line 16, ../scss/_components.scss */
+
+.header__subtitle {
+  font-family: Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
+  font-size: 19.2px;
+}
+
+/* line 1, ../scss/items/_nav.scss */
+
+.nav {
+  margin: 0.7 0;
+  padding: 0.35;
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-left: 0;
+  border-right: 0;
+  position: relative;
+  z-index: 100;
+}
+
+/* line 10, ../scss/items/_nav.scss */
+
+.nav .nav__title {
+  position: absolute;
+  top: 0.35;
+  bottom: 0.35;
+  left: 0.35;
+  font-size: .8em;
+  font-weight: normal;
+  line-height: 1.4;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+  opacity: 0.9;
+  width: 170px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+@media only screen and (max-width: 640px) {
+  /* line 10, ../scss/items/_nav.scss */
+
+  .nav .nav__title {
+    width: auto;
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+  }
+}
+
+/* line 32, ../scss/items/_nav.scss */
+
+.nav li {
+  display: inline-block;
+  margin: 0 1.4;
+  text-align: center;
+  position: relative;
+}
+
+/* line 37, ../scss/items/_nav.scss */
+
+.nav li:first-child {
+  position: static;
+}
+
+@media only screen and (max-width: 640px) {
+  /* line 32, ../scss/items/_nav.scss */
+
+  .nav li {
+    margin-top: 0.23333;
+    margin-bottom: 0.23333;
+  }
+}
+
+/* line 45, ../scss/items/_nav.scss */
+
+.nav a {
+  display: block;
+}
+
+/* line 47, ../scss/items/_nav.scss */
+
+.nav a.current {
+  text-decoration: underline;
+}
+
+/* line 50, ../scss/items/_nav.scss */
+
+.nav a.button,
+.nav a {
+  margin: 0;
+}
+
+/* line 53, ../scss/items/_nav.scss */
+
+.nav a:hover + .dropdown {
+  display: block;
+}
+
+/* line 57, ../scss/items/_nav.scss */
+
+.nav .dropdown {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding-top: 1.4;
+}
+
+/* line 63, ../scss/items/_nav.scss */
+
+.nav .dropdown:hover {
+  display: block;
+}
+
+/* line 66, ../scss/items/_nav.scss */
+
+.nav .dropdown a {
+  margin: 0;
+  white-space: normal;
+}
+
+@media only screen and (max-width: 640px) {
+  /* line 1, ../scss/items/_nav.scss */
+
+  .nav {
+    padding-left: 0;
+    text-align: center;
+  }
+}
+
+/* line 1, ../scss/pages/_fight.scss */
+
+.fight {
+  text-align: center;
+}
+
+/* line 8, ../scss/pages/_fight.scss */
+
+.fighter {
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 3px;
+  padding: 30px 10px;
+}
+
+/* line 14, ../scss/pages/_fight.scss */
+
+.fighter:hover,
+.fighter:focus {
+  background: rgba(105, 87, 46, 0.2);
+}
+
+/* line 20, ../scss/pages/_fight.scss */
+
+.fighter__img-wrapper,
+.fighter__more-info {
+  display: block;
+  text-align: center;
+}
+
+/* line 25, ../scss/pages/_fight.scss */
+
+.fighter__img-wrapper {
+  overflow: hidden;
+  position: relative;
+  max-height: 434px;
+}
+
+/* line 31, ../scss/pages/_fight.scss */
+
+.fighter__img {
+  position: relative;
+  top: -36px;
+}
+
+/* line 36, ../scss/pages/_fight.scss */
+
+.fighter__vs {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100px;
+  text-align: center;
+  font-family: Hearthstone, Georgia, 'DejaVu Serif', Norasi, serif;
+  font-size: 3em;
+  font-style: italic;
+}
+
+/* line 46, ../scss/pages/_fight.scss */
+
+.fight__draw {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+/* line 1, ../scss/_main.scss */
+
+body {
+  background: #e9d6ab;
+}
+
+/* line 5, ../scss/_main.scss */
+
+a {
+  color: #222222;
+  border-bottom: 1px solid #c79a34;
+  text-decoration: none;
+  margin: 0 6px;
+  padding: 3px 0;
+}
+
+/* line 14, ../scss/_main.scss */
+
+a:hover,
+a:focus {
+  border-bottom: 0;
+  color: #69572e;
+  padding: 3px 6px;
+  margin: 0;
+  color: #f5f5f5;
+  border-radius: 3px;
+  background: #4b608b;
+  border-color: #39496a;
+}
+
+/* line 26, ../scss/_main.scss */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-family: Hearthstone, Georgia, 'DejaVu Serif', Norasi, serif;
+}
+
+/* line 31, ../scss/_main.scss */
+
+#footer {
+  margin: 100px auto 20px;
+  text-align: center;
+}
