@@ -3,8 +3,11 @@
 //couleurs
 $base-color: #222;
 
+$sand: #e9d6ab;
+$blue: darken(#546B9C, 5%);
+
 //fonts
-$serif: unquote("Georgia, 'DejaVu Serif', Norasi, serif");
+$serif: unquote("Hearthstone, Georgia, 'DejaVu Serif', Norasi, serif");
 $sans-serif: unquote("Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif");
 $monospace: unquote("Consolas, Monaco, 'Liberation Mono', 'Courier New', Courier, monospace");
 $base-font-family: $sans-serif;

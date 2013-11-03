@@ -16,9 +16,9 @@ class Halp {
 		return $word . ($count > 1 ? 's' : '');
 	}
 
-	public static function fighterImg($fighter) {
+	public static function fighterImgPath($fighter) {
 		if (file_exists(WEBROOT_PATH.'/img/fighters/'.$fighter->name_.'.png'))
-			return '<img src="/img/fighters/'.$fighter->name_.'.png" alt="'.$fighter->name.'" />';
+			return '/img/fighters/'.$fighter->name_.'.png';
 		else
 			return '';
 	}

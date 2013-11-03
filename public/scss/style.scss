@@ -1,7 +1,26 @@
 @import "compass/css3";
+
+@font-face {
+	font-family: 'Hearthstone';
+	src: url('../fonts/belwe_bd_bt_bold-webfont.eot');
+	src: url('../fonts/belwe_bd_bt_bold-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/belwe_bd_bt_bold-webfont.woff') format('woff'),
+		 url('../fonts/belwe_bd_bt_bold-webfont.ttf') format('truetype'),
+		 url('../fonts/belwe_bd_bt_bold-webfont.svg#belwe_bd_btbold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@import "icons";
+
 @import "functions";
 @import "variables";
 @import "mixins";
 @import "base";
 @import "helpers";
+@import "components";
+
+@import "items/nav";
+
+@import "pages/fight";
+@import "pages/top";
 @import "main";
