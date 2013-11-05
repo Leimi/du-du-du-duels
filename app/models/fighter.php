@@ -16,7 +16,7 @@ class Model_Fighter extends RedBean_SimpleModel
 		$first = R::findOne('fighter', ' ORDER BY RAND()');
 		if (empty($first->id))
 			return array();
-		$second = R::findOne('fighter', ' id <> ? AND fights < (SELECT AVG(fights) from fighter)', array($first->id));
+		$second = R::findOne('fighter', ' id <> ? AND fights <= (SELECT AVG(fights) from fighter) ORDER BY RAND()', array($first->id));
 		return array($first->id => $first, $second->id => $second);
 	}
 
