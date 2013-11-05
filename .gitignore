@@ -5,6 +5,7 @@
 *.sublime-*
 
 app/config/database.php
+app/lib/private.php
 
 app/vendor
 composer.lock
@@ -22,3 +23,5 @@ node_modules
 
 public/dist
 dist
+
+bot/

@@ -44,16 +44,3 @@ $app->post('/fight', function() use ($app) {
 		$app->redirect($app->urlFor('fight'));
 	}
 })->name('post-fight');
-
-$app->get('/top', function() use ($app) {
-	$fighters = Model_Fighter::top();
-	$app->render('top.php', array('fighters' => $fighters));
-})->name('top');
-
-$app->get('/bot/fillDB', function() use($app) {
-	require __DIR__.'/../../bot/fillDB.php';
-});
-
-$app->get('/bot/updateScores', function() use($app) {
-	Model_Fighter::updateScores();
-});
