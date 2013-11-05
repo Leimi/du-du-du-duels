@@ -7,7 +7,7 @@
 	require_once ROUTES_PATH.'/fighters.php';
 	require_once ROUTES_PATH.'/fights.php';
 
-	require_once LIB_PATH.'/private_includes.php';
+	require_once LIB_PATH.'/private.php';
 
 	$app->run();
 ?>
