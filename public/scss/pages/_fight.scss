@@ -23,13 +23,9 @@
 			@extend .box--green;
 		}
 
-		.fighter--loser {
-			opacity: 0.6;
-		}
-
+		.fighter--loser,
 		.fighter.fighter--draw {
-			opacity: 0.8;
-			@extend .box--yellow;
+			opacity: 0.6;
 		}
 
 			.fighter__img-wrapper,
