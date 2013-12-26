@@ -1,5 +1,5 @@
 <?php
-	require dirname(__FILE__).'/../app/config/init.php';
+	require_once CONFIG_PATH.'/init.php';
 
 	require_once MODELS_PATH.'/fighter.php';
 	require_once MODELS_PATH.'/fight.php';

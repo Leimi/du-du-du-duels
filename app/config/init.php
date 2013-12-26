@@ -5,6 +5,7 @@ session_start();
 date_default_timezone_set('Europe/Paris');
 
 define('APP_PATH', __DIR__.'/..');
+define('CONFIG_PATH', __DIR__);
 define('ROUTES_PATH', APP_PATH.'/routes');
 define('LIB_PATH', APP_PATH.'/lib');
 define('MODELS_PATH', APP_PATH.'/models');
