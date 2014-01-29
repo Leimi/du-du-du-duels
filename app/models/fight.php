@@ -78,4 +78,8 @@ class Model_Fight extends RedBean_SimpleModel
 
 		return !empty($fightId);
 	}
+
+	public static function total() {
+		return R::count('fight', ' is_active = 1 and is_reset IS NULL', array());
+	}
 }

@@ -1,5 +1,7 @@
 <?php if (!$app->request()->isAjax()) include(__DIR__ . '/layout/head.php'); ?>
 
+<?php if ($remaining < 0): ?>
+
 <table class="top striped">
 	<tr>
 		<th>Card</th>
@@ -18,5 +20,15 @@
 	</tr>
 	<?php endforeach; endif; ?>
 </table>
+
+<?php else: ?>
+
+<h2>Not enough votes!</h2>
+
+<p>Showing some ranking is kinda useless without a decent amount of votes… Vote more or come back later!</p>
+
+<p>Around <?php echo round($remaining, ($remaining > 100 ? -2 : -1)) ?> votes remaining until rankings appear.</p>
+
+<?php endif ?>
 
 <?php if (!$app->request()->isAjax()) include(__DIR__ . '/layout/foot.php'); ?>
