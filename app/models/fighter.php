@@ -6,9 +6,14 @@ class Model_Fighter extends RedBean_SimpleModel
 {
 	public function update() {
 		if (empty($this->id)) {
-			$this->created = date('Y-m-d H:i:s');
 			$this->score = Elo::INITIAL_SCORE;
+			$this->fights = 0;
+			$results = array('win', 'lost', 'draw');
+			foreach ($results as $result)
+				$this->{$result.'s'} = 0;
+
 			$this->is_active = 1;
+			$this->created = date('Y-m-d H:i:s');
 		}
 	}
 
