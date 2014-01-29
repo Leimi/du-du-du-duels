@@ -21,7 +21,8 @@ class Model_Fight extends RedBean_SimpleModel
 			$this->ua = $_SERVER['HTTP_USER_AGENT'];
 			$this->ip = $_SERVER['REMOTE_ADDR'];
 			$this->created = date('Y-m-d H:i:s');
-			$this->active = 1;
+			$this->is_active = 1;
+			$this->is_reset = 1;
 		}
 	}
 

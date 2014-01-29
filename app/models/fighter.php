@@ -7,8 +7,8 @@ class Model_Fighter extends RedBean_SimpleModel
 	public function update() {
 		if (empty($this->id)) {
 			$this->created = date('Y-m-d H:i:s');
-			$this->active = 1;
 			$this->score = Elo::INITIAL_SCORE;
+			$this->is_active = 1;
 		}
 	}
 
@@ -21,8 +21,8 @@ class Model_Fighter extends RedBean_SimpleModel
 	}
 
 	public static function updateScores() {
-		$activeFights = R::getCol("SELECT id FROM fight WHERE active = 1");
-		$activeTrueFights = R::getCol("SELECT id FROM fight WHERE active = 1 and is_reset IS NULL");
+		$activeFights = R::getCol("SELECT id FROM fight WHERE is_active = 1");
+		$activeTrueFights = R::getCol("SELECT id FROM fight WHERE is_active = 1 and is_reset IS NULL");
 		$query = '
 			UPDATE fighter as ft
 			SET
