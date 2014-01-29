@@ -1,3 +1,6 @@
+.top {
+	margin: 0 auto;
+}
 td[data-score] {
 
 }
@@ -15,4 +18,7 @@ td[data-wins="0"],
 td[data-losts="0"],
 td[data-draws="0"] {
 	opacity: 0.5;
+}
+td[data-fights] {
+	min-width: 300px;
 }
