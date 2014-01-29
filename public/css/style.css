@@ -1,6 +1,3 @@
-@charset "UTF-8";
-
-
 @font-face {
   font-family: 'Hearthstone';
   src: url("../fonts/belwe_bd_bt_bold-webfont.eot");
@@ -567,13 +564,12 @@ label {
 /* line 1, ../scss/_components.scss */
 
 .website-title {
-  opacity: 0.7;
   color: #69572e;
   font-family: Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
   font-size: 16px;
 }
 
-/* line 8, ../scss/_components.scss */
+/* line 7, ../scss/_components.scss */
 
 .header__title {
   font-size: 64px;
@@ -581,14 +577,14 @@ label {
   text-align: center;
 }
 
-/* line 14, ../scss/_components.scss */
+/* line 13, ../scss/_components.scss */
 
 .header__subtitle {
   font-family: Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
   font-size: 19.2px;
 }
 
-/* line 23, ../scss/_components.scss */
+/* line 22, ../scss/_components.scss */
 
 .hearthstone-button {
   font-family: Hearthstone, Georgia, 'DejaVu Serif', Norasi, serif;
@@ -597,7 +593,7 @@ label {
   background: none;
 }
 
-/* line 30, ../scss/_components.scss */
+/* line 29, ../scss/_components.scss */
 
 .box--green,
 .fighter.fighter--winner {
@@ -605,22 +601,21 @@ label {
   border-color: rgba(24, 204, 0, 0.5);
 }
 
-/* line 35, ../scss/_components.scss */
+/* line 34, ../scss/_components.scss */
 
 .box--red {
   background: rgba(255, 64, 64, 0.1);
   border-color: rgba(255, 13, 13, 0.5);
 }
 
-/* line 40, ../scss/_components.scss */
+/* line 39, ../scss/_components.scss */
 
-.box--yellow,
-.fighter.fighter--draw {
+.box--yellow {
   background: rgba(255, 209, 0, 0.1);
   border-color: rgba(204, 167, 0, 0.5);
 }
 
-/* line 45, ../scss/_components.scss */
+/* line 44, ../scss/_components.scss */
 
 .transition,
 .fighter {
@@ -628,135 +623,47 @@ label {
   transition: all 0.1s linear;
 }
 
-/* http://knacss.com/ yabon (couleurs modifiées) ! */
+/* line 48, ../scss/_components.scss */
 
-/* ----------------------------- */
-
-/* ==tables                      */
-
-/* ----------------------------- */
-
-/* line 7, ../scss/components/_tables.scss */
-
-table,
-.table {
-  max-width: 100%;
-  table-layout: fixed;
-  border-collapse: collapse;
-  vertical-align: top;
+.progress {
+  height: 20px;
+  overflow: hidden;
+  background-color: transparent;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* line 13, ../scss/components/_tables.scss */
+/* line 56, ../scss/_components.scss */
 
-table {
-  width: 100%;
+.progress__bar {
+  float: left;
+  width: 0;
+  height: 100%;
+  font-size: 12px;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+  background-color: #428bca;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
 }
 
-/* line 16, ../scss/components/_tables.scss */
+/* line 69, ../scss/_components.scss */
 
-.table {
-  display: table;
+.progress__bar--win {
+  background-color: #5cb85c;
 }
 
-/* line 20, ../scss/components/_tables.scss */
+/* line 73, ../scss/_components.scss */
 
-table#recaptcha_table,
-table.table-auto {
-  table-layout: auto;
+.progress__bar--draw {
+  background-color: #f0ad4e;
 }
 
-/* line 23, ../scss/components/_tables.scss */
+/* line 77, ../scss/_components.scss */
 
-caption {
-  padding: 10px;
-  color: #555;
-  font-style: italic;
-}
-
-/* line 28, ../scss/components/_tables.scss */
-
-table {
-  border: 1px solid #dec283;
-}
-
-/* line 31, ../scss/components/_tables.scss */
-
-tr > * + * {
-  border-left: 1px solid #dec283;
-}
-
-/* line 35, ../scss/components/_tables.scss */
-
-th,
-td {
-  padding: .3em .8em;
-  text-align: left;
-  border-bottom: 1px solid #dec283;
-}
-
-/* alternate tables */
-
-/* line 42, ../scss/components/_tables.scss */
-
-.alternate {
-  border: 0;
-}
-
-/* line 43, ../scss/components/_tables.scss */
-
-.alternate tbody {
-  border: 1px solid #dec283;
-}
-
-/* line 46, ../scss/components/_tables.scss */
-
-.alternate thead tr > * + * {
-  border-left: 0;
-}
-
-/* line 49, ../scss/components/_tables.scss */
-
-.alternate tbody tr > * + * {
-  border-left: 1px solid #dec283;
-}
-
-/* alternate-vert tables */
-
-/* line 54, ../scss/components/_tables.scss */
-
-.alternate-vert {
-  border: 0;
-  border-right: 1px solid #dec283;
-}
-
-/* line 58, ../scss/components/_tables.scss */
-
-.alternate-vert tr > :first-child {
-  border-bottom: 0;
-}
-
-/* line 61, ../scss/components/_tables.scss */
-
-.alternate-vert tr > * + * {
-  border-top: 1px solid #dec283;
-}
-
-/* striped tables */
-
-/* line 66, ../scss/components/_tables.scss */
-
-.striped tbody tr:nth-child(odd) {
-  background: #eee;
-  background: rgba(0, 0, 0, 0.05);
-}
-
-/* striped-vert tables */
-
-/* line 72, ../scss/components/_tables.scss */
-
-.striped-vert tr > :first-child {
-  background: #eee;
-  background: rgba(0, 0, 0, 0.05);
+.progress__bar--lost {
+  background-color: #d9534f;
 }
 
 /* line 1, ../scss/pages/_fight.scss */
@@ -766,7 +673,7 @@ td {
   display: inline-block;
 }
 
-/* line 10, ../scss/pages/_fight.scss */
+/* line 9, ../scss/pages/_fight.scss */
 
 .fighter,
 .fight__between {
@@ -784,17 +691,12 @@ td {
 
 /* line 26, ../scss/pages/_fight.scss */
 
-.fighter--loser {
+.fighter--loser,
+.fighter.fighter--draw {
   opacity: 0.6;
 }
 
-/* line 30, ../scss/pages/_fight.scss */
-
-.fighter.fighter--draw {
-  opacity: 0.8;
-}
-
-/* line 38, ../scss/pages/_fight.scss */
+/* line 31, ../scss/pages/_fight.scss */
 
 .fighter__img-wrapper,
 .fighter__more-info
@@ -804,7 +706,7 @@ td {
   text-align: center;
 }
 
-/* line 44, ../scss/pages/_fight.scss */
+/* line 39, ../scss/pages/_fight.scss */
 
 .fighter__img-wrapper,
 .fight__vs-wrapper {
@@ -814,14 +716,14 @@ td {
   line-height: 434px;
 }
 
-/* line 51, ../scss/pages/_fight.scss */
+/* line 47, ../scss/pages/_fight.scss */
 
 .fighter__img {
   position: relative;
   top: -36px;
 }
 
-/* line 60, ../scss/pages/_fight.scss */
+/* line 56, ../scss/pages/_fight.scss */
 
 .fight__vs {
   width: 100px;
@@ -830,14 +732,14 @@ td {
   font-size: 3em;
 }
 
-/* line 67, ../scss/pages/_fight.scss */
+/* line 63, ../scss/pages/_fight.scss */
 
 .fight__draw {
   display: inline-block;
   margin: 0 auto;
 }
 
-/* line 72, ../scss/pages/_fight.scss */
+/* line 68, ../scss/pages/_fight.scss */
 
 .fight__skip {
   float: right;
@@ -845,30 +747,42 @@ td {
   font-size: 12.8px;
 }
 
-/* line 4, ../scss/pages/_top.scss */
+/* line 1, ../scss/pages/_top.scss */
+
+.top {
+  margin: 0 auto;
+}
+
+/* line 7, ../scss/pages/_top.scss */
 
 td[data-wins] {
   color: #18cc00;
 }
 
-/* line 7, ../scss/pages/_top.scss */
+/* line 10, ../scss/pages/_top.scss */
 
 td[data-losts] {
   color: #ff0d0d;
 }
 
-/* line 10, ../scss/pages/_top.scss */
+/* line 13, ../scss/pages/_top.scss */
 
 td[data-draws] {
   color: #cca700;
 }
 
-/* line 16, ../scss/pages/_top.scss */
+/* line 17, ../scss/pages/_top.scss */
 
 td[data-wins="0"],
 td[data-losts="0"],
 td[data-draws="0"] {
   opacity: 0.5;
+}
+
+/* line 22, ../scss/pages/_top.scss */
+
+td[data-fights] {
+  min-width: 300px;
 }
 
 /* line 1, ../scss/_main.scss */
@@ -894,7 +808,7 @@ a {
   padding: 0 0 3px;
 }
 
-/* line 14, ../scss/_main.scss */
+/* line 13, ../scss/_main.scss */
 
 a:hover,
 a:focus {
@@ -906,9 +820,10 @@ a:focus {
 
 a:active {
   color: #003c78;
+  border-bottom: 1px solid #003c78;
 }
 
-/* line 23, ../scss/_main.scss */
+/* line 24, ../scss/_main.scss */
 
 h1,
 h2,
@@ -920,25 +835,28 @@ h6 {
   font-family: Hearthstone, Georgia, 'DejaVu Serif', Norasi, serif;
 }
 
-/* line 28, ../scss/_main.scss */
+/* line 29, ../scss/_main.scss */
 
 #container {
   max-width: 800px;
   margin: 0 auto;
 }
 
-/* line 33, ../scss/_main.scss */
+/* line 34, ../scss/_main.scss */
 
 #footer {
-  margin: 200px auto 20px;
+  margin: 200px auto 0;
+  padding: 20px;
   text-align: center;
+  opacity: 0.7;
 }
 
 @media only screen and (min-width: 1300px) {
-  /* line 33, ../scss/_main.scss */
+  /* line 34, ../scss/_main.scss */
 
   #footer {
     margin: 3px;
+    padding: 0;
     text-align: left;
     position: absolute;
     top: 0;
@@ -946,8 +864,15 @@ h6 {
   }
 }
 
-/* line 44, ../scss/_main.scss */
+/* line 47, ../scss/_main.scss */
 
 #footer h1 {
   margin: 0;
+  padding: 0;
+}
+
+/* line 53, ../scss/_main.scss */
+
+#footer:hover {
+  opacity: 1;
 }
