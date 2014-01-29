@@ -17,6 +17,7 @@ a {
 	}
 	&:active {
 		color: darken($blue, 10%);
+		border-bottom: 1px solid darken($blue, 10%);
 	}
 }
 
@@ -31,10 +32,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #footer {
-	margin: 200px auto 20px;
+	margin: 200px auto 0;
+	padding: 20px;
 	text-align: center;
 	@media only screen and (min-width: 1300px) {
 		margin: 3px;
+		padding: 0;
 		text-align: left;
 		position: absolute;
 		top: 0;
@@ -43,5 +46,11 @@ h1, h2, h3, h4, h5, h6 {
 
 	h1 {
 		margin: 0;
+		padding: 0;
+	}
+
+	opacity: 0.7;
+	&:hover {
+		opacity: 1;
 	}
 }
