@@ -18,10 +18,10 @@ class Model_Fighter extends RedBean_SimpleModel
 	}
 
 	public static function getRandomFightersForADuelAtLeastAsEpicAsThisMethodName() {
-		$first = R::findOne('fighter', ' ORDER BY RAND()');
+		$first = R::findOne('fighter', ' ORDER BY RAND() LIMIT ?', array(1));
 		if (empty($first->id))
 			return array();
-		$second = R::findOne('fighter', ' id <> ? AND fights <= (SELECT AVG(fights) from fighter) ORDER BY RAND()', array($first->id));
+		$second = R::findOne('fighter', ' id <> ? AND fights <= (SELECT AVG(fights) from fighter) ORDER BY RAND() LIMIT ?', array($first->id, 1));
 		return array($first->id => $first, $second->id => $second);
 	}
 
