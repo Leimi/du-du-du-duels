@@ -44,4 +44,23 @@ class Model_Fighter extends RedBean_SimpleModel
 	public static function top($number = 50) {
 		return R::find('fighter', ' fights > 0 ORDER BY score DESC limit '.$number);
 	}
+
+	public static function importAll() {
+		$existingFighters = R::findAll('fighter');
+		$existingFighterNames = array();
+		foreach ($existingFighters as $fighter) {
+			$existingFighterNames[$fighter->id]= $fighter->name_;
+		}
+
+		$fightersToImport = R::findAll('import');
+		foreach ($fightersToImport as $fighterToImport) {
+			if (in_array($fighterToImport->name_, $existingFighterNames))
+				continue;
+			$fighter = R::dispense('fighter');
+			foreach (array('hhId', 'name', 'name_') as $field) {
+				$fighter->{$field} = $fighterToImport->{$field};
+			}
+			R::store($fighter);
+		}
+	}
 }
