@@ -22,4 +22,15 @@ class Halp {
 		else
 			return '';
 	}
+
+	public static function rankIcon($diff)	{
+		if ($diff === Model_Rank::NEW_PLAYER_IN_TOWN)
+			return '&rarr;'; //→
+		if ($diff > 0)
+			return '&uarr;'; //↑
+		if ($diff < 0)
+			return '&darr;'; //↓
+		if ($diff === 0)
+			return '&ndash;'; //–
+	}
 }

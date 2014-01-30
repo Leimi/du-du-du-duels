@@ -6,13 +6,21 @@
 
 <table class="top striped">
 	<tr>
+		<th>Rank</th>
 		<th>Card</th>
 		<th>Score</th>
 		<th>Fights</th>
 	</tr>
-	<?php if (!empty($fighters)): foreach ($fighters as $fighter): ?>
+	<?php if (!empty($fighters)): foreach ($fighters as $key => $fighter):
+		$diff = isset($ranks->diff[$key]) ? $ranks->diff[$key] : null;
+	?>
 	<tr>
-		<td><?php echo $fighter->name ?></td>
+		<?php if ($diff): ?>
+		<td data-position="<?php echo $diff ?>"><?php echo Halp::rankIcon($diff) ?></td>
+		<?php else: ?>
+		<td></td>
+		<?php endif ?>
+		<td data-id="<?php echo $fighter->id ?>"><?php echo $fighter->name ?></td>
 		<td data-score="<?php echo $fighter->score ?>"><?php echo $fighter->score ?></td>
 		<td data-fights="<?php echo $fighter->fights ?>">
 			<div class="progress">
