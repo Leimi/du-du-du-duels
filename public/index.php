@@ -3,6 +3,7 @@
 
 	require_once MODELS_PATH.'/fighter.php';
 	require_once MODELS_PATH.'/fight.php';
+	require_once MODELS_PATH.'/rank.php';
 
 	require_once ROUTES_PATH.'/fighters.php';
 	require_once ROUTES_PATH.'/fights.php';
