@@ -24,13 +24,17 @@ class Halp {
 	}
 
 	public static function rankIcon($diff)	{
-		if ($diff === Model_Rank::NEW_PLAYER_IN_TOWN)
-			return '&rarr;'; //→
-		if ($diff > 0)
-			return '&uarr;'; //↑
-		if ($diff < 0)
-			return '&darr;'; //↓
-		if ($diff === 0)
-			return '&ndash;'; //–
+		$data = array();
+		if ($diff === Model_Rank::NEW_PLAYER_IN_TOWN) {
+			$data = array('&rarr;', 'New this week', 'rank rank--new');
+		} elseif ($diff > 0) {
+			$data = array('&uarr;', 'Gained '.$diff.' '.self::pluralize('place', $diff).' this week', 'rank rank--up');
+		} elseif ($diff < 0) {
+			$diff = $diff*-1;
+			$data = array('&darr;', 'Lost '.$diff.' '.self::pluralize('place', $diff).' this week', 'rank rank--down');
+		} elseif ($diff === 0) {
+			$data = array('-', 'Not moved since last week', 'rank rank--still');
+		}
+		return '<span title="'.$data[1].'" class="'.$data[2].'">'.$data[0].'</span>';
 	}
 }
