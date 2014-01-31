@@ -47,6 +47,11 @@
 				.fighter__img {
 					position: relative;
 					top: -36px;
+
+					&:active,
+					&:focus {
+						outline: none;
+					}
 				}
 
 	.fight__between {

@@ -3,18 +3,28 @@ var wowhead_tooltips = { "colorlinks": true, "iconizelinks": true, "renamelinks"
 (function() {
 	$body = $('body');
 
-	$body.on('mouseenter', '.fighter__img', function() {
-		var $this = $(this).closest('.fighter').addClass('fighter--winner');
-		$('.fighter').not($this).addClass('fighter--loser');
-	});
-	$body.on('mouseleave', '.fighter__img', function() {
-		$('.fighter').removeClass('fighter--loser').removeClass('fighter--winner');
-	});
+	function clearFightClasses(el) {
+		$('.fighter').removeClass('fighter--loser').removeClass('fighter--winner').removeClass('fighter--draw');
+	}
 
-	$body.on('mouseenter', '.fight__draw', function() {
+	function addWinningFightClasses(el) {
+		clearFightClasses();
+		var $el = $(el).closest('.fighter').addClass('fighter--winner');
+		$('.fighter').not($el).addClass('fighter--loser');
+	}
+
+	function addDrawFightClasses(el) {
+		clearFightClasses();
 		$('.fighter').addClass('fighter--draw');
+	}
+
+	$body.on('mouseenter focus', '.fighter__img', function() {
+		addWinningFightClasses(this);
 	});
-	$body.on('mouseleave', '.fight__draw', function() {
-		$('.fighter').removeClass('fighter--draw');
+	$body.on('mouseenter focus', '.fight__draw', function() {
+		addDrawFightClasses(this);
+	});
+	$body.on('mouseleave blur', '.fighter__img, .fight__draw', function() {
+		clearFightClasses(this);
 	});
 })();
