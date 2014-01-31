@@ -62,18 +62,42 @@
 		color: #fff;
 		text-align: center;
 		background-color: #428bca;
+		background-color: $blue;
 		-webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,0.15);
 		box-shadow: inset 0 -1px 0 rgba(0,0,0,0.15);
 	}
 
 	.progress__bar--win {
 		background-color: #5cb85c;
+		background-color: $flat-green;
 	}
 
 	.progress__bar--draw {
 		background-color: #f0ad4e;
+		background-color: $flat-yellow;
 	}
 
 	.progress__bar--lost {
 		background-color: #d9534f;
+		background-color: $flat-red;
 	}
+
+.rank {
+	font-weight: bold;
+}
+
+.rank--up {
+	color: $flat-green;
+}
+
+.rank--down {
+	color: $flat-red;
+}
+
+.rank--new {
+	color: $flat-blue;
+}
+
+.rank--still {
+	color: $flat-yellow;
+}

@@ -644,26 +644,60 @@ label {
   color: #fff;
   text-align: center;
   background-color: #428bca;
+  background-color: #0055ab;
   -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
 }
 
-/* line 69, ../scss/_components.scss */
+/* line 70, ../scss/_components.scss */
 
 .progress__bar--win {
   background-color: #5cb85c;
+  background-color: #27ae60;
 }
 
-/* line 73, ../scss/_components.scss */
+/* line 75, ../scss/_components.scss */
 
 .progress__bar--draw {
   background-color: #f0ad4e;
+  background-color: #f1c40f;
 }
 
-/* line 77, ../scss/_components.scss */
+/* line 80, ../scss/_components.scss */
 
 .progress__bar--lost {
   background-color: #d9534f;
+  background-color: #e74c3c;
+}
+
+/* line 85, ../scss/_components.scss */
+
+.rank {
+  font-weight: bold;
+}
+
+/* line 89, ../scss/_components.scss */
+
+.rank--up {
+  color: #27ae60;
+}
+
+/* line 93, ../scss/_components.scss */
+
+.rank--down {
+  color: #e74c3c;
+}
+
+/* line 97, ../scss/_components.scss */
+
+.rank--new {
+  color: #3498db;
+}
+
+/* line 101, ../scss/_components.scss */
+
+.rank--still {
+  color: #f1c40f;
 }
 
 /* line 1, ../scss/pages/_fight.scss */
@@ -723,7 +757,14 @@ label {
   top: -36px;
 }
 
-/* line 56, ../scss/pages/_fight.scss */
+/* line 51, ../scss/pages/_fight.scss */
+
+.fighter__img:active,
+.fighter__img:focus {
+  outline: none;
+}
+
+/* line 61, ../scss/pages/_fight.scss */
 
 .fight__vs {
   width: 100px;
@@ -732,14 +773,14 @@ label {
   font-size: 3em;
 }
 
-/* line 63, ../scss/pages/_fight.scss */
+/* line 68, ../scss/pages/_fight.scss */
 
 .fight__draw {
   display: inline-block;
   margin: 0 auto;
 }
 
-/* line 68, ../scss/pages/_fight.scss */
+/* line 73, ../scss/pages/_fight.scss */
 
 .fight__skip {
   float: right;
@@ -783,6 +824,12 @@ td[data-draws="0"] {
 
 td[data-fights] {
   min-width: 300px;
+}
+
+/* line 26, ../scss/pages/_top.scss */
+
+td[data-position] {
+  text-align: center;
 }
 
 /* line 1, ../scss/_main.scss */

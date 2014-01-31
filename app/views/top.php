@@ -15,7 +15,7 @@
 		$diff = isset($ranks->diff[$key]) ? $ranks->diff[$key] : null;
 	?>
 	<tr>
-		<?php if ($diff): ?>
+		<?php if (!is_null($diff)): ?>
 		<td data-position="<?php echo $diff ?>"><?php echo Halp::rankIcon($diff) ?></td>
 		<?php else: ?>
 		<td></td>
