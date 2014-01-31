@@ -65,7 +65,7 @@ class Model_Rank extends RedBean_SimpleModel
 		$nowPositions = array_flip($now);
 		$oldPositions = array_flip($old);
 		foreach ($now as $position => $id) {
-			$diff[$id] = isset($oldPositions[$id]) ? $position - $oldPositions[$id] : self::NEW_PLAYER_IN_TOWN;
+			$diff[$id] = isset($oldPositions[$id]) ? $oldPositions[$id] - $position : self::NEW_PLAYER_IN_TOWN;
 		}
 
 		return $diff;

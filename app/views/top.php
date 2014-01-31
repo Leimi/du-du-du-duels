@@ -1,6 +1,6 @@
 <?php if (!$app->request()->isAjax()) include(__DIR__ . '/layout/head.php'); ?>
 
-<?php if ($remaining < 0): ?>
+<?php if ($remaining > 0): ?>
 <p class="warning">Currently, less than <?php echo round($count, ($count > 100 ? -2 : -1)) ?> duels occured in total. That's not much: the top 50 can change rather quickly.</p>
 <?php endif ?>
 
