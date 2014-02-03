@@ -6,22 +6,24 @@
 
 <table class="top striped">
 	<tr>
-		<th>Rank</th>
+		<th colspan=2>Rank</th>
 		<th>Card</th>
-		<th>Score</th>
 		<th>Fights</th>
 	</tr>
-	<?php if (!empty($fighters)): foreach ($fighters as $key => $fighter):
+	<?php if (!empty($fighters)):
+	$i = $rank = 1;
+	$prevScore = null;
+	foreach ($fighters as $key => $fighter):
 		$diff = isset($ranks->diff[$key]) ? $ranks->diff[$key] : null;
-	?>
+		$rank = $prevScore === $fighter->score ? $rank : $i; ?>
 	<tr>
 		<?php if (!is_null($diff)): ?>
 		<td data-position="<?php echo $diff ?>"><?php echo Halp::rankIcon($diff) ?></td>
 		<?php else: ?>
 		<td></td>
 		<?php endif ?>
+		<td data-rank="<?php echo $rank ?>" data-score="<?php echo $fighter->score ?>" title="Score: <?php echo $fighter->score ?>"><?php echo $rank ?></td>
 		<td data-id="<?php echo $fighter->id ?>"><?php echo $fighter->name ?></td>
-		<td data-score="<?php echo $fighter->score ?>"><?php echo $fighter->score ?></td>
 		<td data-fights="<?php echo $fighter->fights ?>">
 			<div class="progress">
 				<div class="progress__bar progress__bar--win" style="width: <?php echo $fighter->wins / $fighter->fights * 100 ?>%"></div>
@@ -30,7 +32,10 @@
 			</div>
 		</td>
 	</tr>
-	<?php endforeach; endif; ?>
+	<?php
+		$prevScore = $fighter->score;
+		$i++;
+	endforeach; endif; ?>
 </table>
 
 <?php if (!$app->request()->isAjax()) include(__DIR__ . '/layout/foot.php'); ?>
