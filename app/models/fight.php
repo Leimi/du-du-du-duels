@@ -22,7 +22,9 @@ class Model_Fight extends RedBean_SimpleModel
 			$this->ip = $_SERVER['REMOTE_ADDR'];
 			$this->created = date('Y-m-d H:i:s');
 			$this->is_active = 1;
-			$this->is_reset = 1;
+			if (empty($this->is_reset)) {
+				$this->is_reset = NULL;
+			}
 		}
 	}
 
