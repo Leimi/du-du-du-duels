@@ -14,7 +14,7 @@
 			</div>
 
 			<div class="fighter__more-info">
-				<a href="http://www.hearthhead.com/card=<?php echo $fighter->hhId ?>&amp;text" target="_blank"><?php echo $fighter->name ?> <span class="icon-small-arrow-up-right" title="See this card on Hearthhead"></span></a>
+				<a href="http://www.hearthhead.com/card=<?php echo $fighter->hhId ?>&amp;text" target="_blank"><?php echo $fighter->name ?></a>
 			</div>
 
 		</div><?php if ($fighterKey === 0): ?><div class="fight__between">
