@@ -27,7 +27,7 @@
 				Who's the <em>best</em>?
 
 				<?php if (CURRENT === $app->urlFor('fight')): ?>
-					<a href="<?php echo $app->urlFor('top') ?>" class="header__subtitle">See the top 50</a>
+					<a href="<?php echo $app->urlFor('top') ?>" class="header__subtitle">See the top</a>
 				<?php endif ?>
 
 				<?php if (CURRENT === $app->urlFor('top')): ?>

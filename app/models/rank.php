@@ -44,6 +44,8 @@ class Model_Rank extends RedBean_SimpleModel
 	}
 
 	public static function lastRankFromXDaysAgo($days = "7") {
+		if ($days === "0")
+			return self::last();
 		$rank = R::findOne('rank', ' DATE(created) <= DATE_SUB( CURDATE( ) , INTERVAL ' . $days . ' DAY) ORDER BY created DESC LIMIT 1');
 		return empty($rank->id) ? null : $rank;
 	}

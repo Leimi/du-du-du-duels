@@ -7,8 +7,8 @@
 <table class="top striped">
 	<tr>
 		<th colspan=2>Rank</th>
+		<th>Ratio</th>
 		<th>Card</th>
-		<th>Fights</th>
 	</tr>
 	<?php if (!empty($fighters)):
 	$i = $rank = 1;
