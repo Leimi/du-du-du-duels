@@ -16,11 +16,10 @@ class Halp {
 		return $word . ($count > 1 ? 's' : '');
 	}
 
-	public static function fighterImgPath($fighter) {
-		if (file_exists(WEBROOT_PATH.'/img/fighters/'.$fighter->name_.'.png'))
-			return '/img/fighters/'.$fighter->name_.'.png';
-		else
-			return '';
+	public static function fighterImgPath($fighter, $options = array()) {
+		$options = array_merge(array('thumb' => false), $options);
+		$filename = '/img/fighters/'.$fighter->name_.($options['thumb'] ? '_thumb' : '').'.png';
+		return file_exists(WEBROOT_PATH.$filename) ? $filename : '';
 	}
 
 	public static function rankIcon($diff)	{

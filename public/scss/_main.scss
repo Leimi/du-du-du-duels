@@ -12,12 +12,12 @@ a {
 	padding: 0 0 3px;
 	&:hover,
 	&:focus {
-		border-bottom: 0;
+		border-bottom-color: transparent;
 		color: $blue;
 	}
 	&:active {
 		color: darken($blue, 10%);
-		border-bottom: 1px solid darken($blue, 10%);
+		border-bottom-color: darken($blue, 10%);
 	}
 }
 

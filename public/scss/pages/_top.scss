@@ -1,24 +1,46 @@
 .top {
 	margin: 0 auto;
-}
-td[data-score] {
+	border-spacing: 3px;
 
-}
-td[data-wins] {
-	color: darken($green, 10%);
-}
-td[data-losts] {
-	color: darken($red, 10%);
-}
-td[data-draws] {
-	color: darken($yellow, 10%);
-}
+	tr {
+		&:hover {
+			background-color: rgba(black, 0.1);
 
-td[data-wins="0"],
-td[data-losts="0"],
-td[data-draws="0"] {
-	opacity: 0.5;
-}
-td[data-fights] {
-	min-width: 300px;
+			.progress {
+				opacity: 1;
+			}
+		}
+	}
+		td {
+			padding: 6px;
+			&:first-child {
+				border-radius: 3px 0 0 3px;
+			}
+			&:last-child {
+				border-radius: 0 3px 3px 0;
+			}
+		}
+
+		td[data-position] {
+			text-align: center;
+		}
+
+		td[data-rank] {
+			text-align: right;
+		}
+
+		.top-item__card-preview {
+			display: inline-block;
+			background-repeat: no-repeat;
+			background-position: center left;
+			background-size: auto 25px;
+			padding-left: 80px;
+		}
+
+			.progress {
+				height: 25px;
+				width: 75px;
+
+				// opacity: .5;
+			}
 }
