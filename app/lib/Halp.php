@@ -13,7 +13,7 @@ class Halp {
 	}
 
 	public static function pluralize($word, $count) {
-		return $word . ($count > 1 ? 's' : '');
+		return $word . ($count > 1 || $count === 0 ? 's' : '');
 	}
 
 	public static function fighterImgPath($fighter, $options = array()) {

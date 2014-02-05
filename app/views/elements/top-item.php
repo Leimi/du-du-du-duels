@@ -9,11 +9,11 @@
 	<?php endif ?>
 
 	<td data-fights="<?php echo $fighter->fights ?>">
-		<div class="progress top-item__ratio" data-tooltip="
-			<?php echo $fighter->fights.' '.Halp::pluralize('fight', $fighter->fights).'<br>'.
-				round($fighter->wins / $fighter->fights * 100).'% wins<br>'.
-				round($fighter->losts / $fighter->fights * 100).'% defeats<br>'.
-				round($fighter->draws / $fighter->fights * 100).'% draws'; ?>">
+		<?php $tooltip = $fighter->fights.' '.Halp::pluralize('fight', $fighter->fights).'<br>';
+		$tooltip .= '<span class=\'text--cool\'>'.$fighter->wins.' ('.round($fighter->wins / $fighter->fights * 100).'%) '.Halp::pluralize('win', $fighter->wins).'</span><br>';
+		if ($fighter->losts) $tooltip .= '<span class=\'text--notcool\'>'.$fighter->losts.' ('.round($fighter->losts / $fighter->fights * 100).'%) '.Halp::pluralize('defeat', $fighter->losts).'</span><br>';
+		if ($fighter->draws) $tooltip .= '<span class=\'text--meh\'>'.$fighter->draws.' ('.round($fighter->draws / $fighter->fights * 100).'%) '.Halp::pluralize('draw', $fighter->draws).'</span>'; ?>
+		<div class="progress top-item__ratio" data-tooltip="<?php echo $tooltip; ?>">
 			<div class="progress__bar progress__bar--cool" style="width: <?php echo $fighter->wins / $fighter->fights * 100 ?>%"></div>
 			<div class="progress__bar progress__bar--notcool" style="width: <?php echo $fighter->losts / $fighter->fights * 100 ?>%"></div>
 			<div class="progress__bar progress__bar--meh" style="width: <?php echo $fighter->draws / $fighter->fights * 100 ?>%"></div>

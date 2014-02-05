@@ -569,7 +569,7 @@ label {
   font-size: 16px;
 }
 
-/* line 7, ../scss/_components.scss */
+/* line 11, ../scss/_components.scss */
 
 .header__title {
   font-size: 64px;
@@ -577,7 +577,7 @@ label {
   text-align: center;
 }
 
-/* line 13, ../scss/_components.scss */
+/* line 17, ../scss/_components.scss */
 
 .header__subtitle {
   font-family: Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
@@ -586,6 +586,24 @@ label {
 
 /* line 22, ../scss/_components.scss */
 
+.text--cool {
+  color: #1eff00;
+}
+
+/* line 26, ../scss/_components.scss */
+
+.text--meh {
+  color: #ffd100;
+}
+
+/* line 30, ../scss/_components.scss */
+
+.text--notcool {
+  color: #ff4040;
+}
+
+/* line 34, ../scss/_components.scss */
+
 .hearthstone-button {
   font-family: Hearthstone, Georgia, 'DejaVu Serif', Norasi, serif;
   color: #69572e;
@@ -593,7 +611,7 @@ label {
   background: none;
 }
 
-/* line 29, ../scss/_components.scss */
+/* line 41, ../scss/_components.scss */
 
 .box--green,
 .fighter.fighter--winner {
@@ -601,21 +619,21 @@ label {
   border-color: rgba(24, 204, 0, 0.5);
 }
 
-/* line 34, ../scss/_components.scss */
+/* line 46, ../scss/_components.scss */
 
 .box--red {
   background: rgba(255, 64, 64, 0.1);
   border-color: rgba(255, 13, 13, 0.5);
 }
 
-/* line 39, ../scss/_components.scss */
+/* line 51, ../scss/_components.scss */
 
 .box--yellow {
   background: rgba(255, 209, 0, 0.1);
   border-color: rgba(204, 167, 0, 0.5);
 }
 
-/* line 44, ../scss/_components.scss */
+/* line 56, ../scss/_components.scss */
 
 .transition,
 .fighter {
@@ -623,7 +641,7 @@ label {
   transition: all 0.1s linear;
 }
 
-/* line 48, ../scss/_components.scss */
+/* line 60, ../scss/_components.scss */
 
 .progress {
   height: 20px;
@@ -633,7 +651,7 @@ label {
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* line 56, ../scss/_components.scss */
+/* line 68, ../scss/_components.scss */
 
 .progress__bar {
   float: left;
@@ -649,61 +667,61 @@ label {
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
 }
 
-/* line 70, ../scss/_components.scss */
+/* line 82, ../scss/_components.scss */
 
-.progress__bar--win {
+.progress__bar--cool {
   background-color: #5cb85c;
   background-color: #27ae60;
 }
 
-/* line 75, ../scss/_components.scss */
+/* line 87, ../scss/_components.scss */
 
-.progress__bar--draw {
+.progress__bar--meh {
   background-color: #f0ad4e;
   background-color: #f1c40f;
 }
 
-/* line 80, ../scss/_components.scss */
+/* line 92, ../scss/_components.scss */
 
-.progress__bar--lost {
+.progress__bar--notcool {
   background-color: #d9534f;
   background-color: #e74c3c;
 }
 
-/* line 85, ../scss/_components.scss */
+/* line 97, ../scss/_components.scss */
 
 .rank {
   font-weight: bold;
   font-family: Georgia;
 }
 
-/* line 90, ../scss/_components.scss */
+/* line 102, ../scss/_components.scss */
 
 .rank--up {
   color: #27ae60;
 }
 
-/* line 94, ../scss/_components.scss */
+/* line 106, ../scss/_components.scss */
 
 .rank--down {
   color: #e74c3c;
 }
 
-/* line 98, ../scss/_components.scss */
+/* line 110, ../scss/_components.scss */
 
 .rank--new {
   color: #9b59b6;
 }
 
-/* line 102, ../scss/_components.scss */
+/* line 114, ../scss/_components.scss */
 
 .rank--still {
   color: #3498db;
 }
 
-/* line 106, ../scss/_components.scss */
+/* line 118, ../scss/_components.scss */
 
-#mouse-tooltip {
+.mouse-tooltip {
   position: absolute;
   top: 0;
   left: 0;
@@ -726,9 +744,9 @@ label {
   padding: 4px;
 }
 
-/* line 129, ../scss/_components.scss */
+/* line 141, ../scss/_components.scss */
 
-.mouse-tooltip-hidden {
+.mouse-tooltip--hidden {
   display: none !important;
 }
 
@@ -824,54 +842,52 @@ label {
 
 .top {
   margin: 0 auto;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
   border-spacing: 3px;
 }
 
-/* line 7, ../scss/pages/_top.scss */
+/* line 6, ../scss/pages/_top.scss */
 
 .top tr:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-/* line 10, ../scss/pages/_top.scss */
+/* line 9, ../scss/pages/_top.scss */
 
 .top tr:hover .progress {
   opacity: 1;
 }
 
-/* line 15, ../scss/pages/_top.scss */
+/* line 14, ../scss/pages/_top.scss */
 
 .top td {
   padding: 6px;
 }
 
-/* line 17, ../scss/pages/_top.scss */
+/* line 16, ../scss/pages/_top.scss */
 
 .top td:first-child {
   border-radius: 3px 0 0 3px;
 }
 
-/* line 20, ../scss/pages/_top.scss */
+/* line 19, ../scss/pages/_top.scss */
 
 .top td:last-child {
   border-radius: 0 3px 3px 0;
 }
 
-/* line 25, ../scss/pages/_top.scss */
+/* line 24, ../scss/pages/_top.scss */
 
 .top td[data-position] {
   text-align: center;
 }
 
-/* line 29, ../scss/pages/_top.scss */
+/* line 28, ../scss/pages/_top.scss */
 
 .top td[data-rank] {
   text-align: right;
 }
 
-/* line 33, ../scss/pages/_top.scss */
+/* line 32, ../scss/pages/_top.scss */
 
 .top .top-item__card-preview {
   display: inline-block;
@@ -882,7 +898,7 @@ label {
   padding-left: 80px;
 }
 
-/* line 41, ../scss/pages/_top.scss */
+/* line 40, ../scss/pages/_top.scss */
 
 .top .progress {
   height: 25px;

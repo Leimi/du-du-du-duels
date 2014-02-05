@@ -19,6 +19,16 @@
 			font-size: $base-font-size*1.2;
 		}
 
+.text--cool {
+	color: $green;
+}
+
+.text--meh {
+	color: $yellow;
+}
+
+.text--notcool {
+	color: $red;
 }
 
 .hearthstone-button {
