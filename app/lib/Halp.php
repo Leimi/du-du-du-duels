@@ -34,6 +34,6 @@ class Halp {
 		} elseif ($diff === 0) {
 			$data = array('&rarr;', 'Not moved since last week', 'rank rank--still');
 		}
-		return '<span title="'.$data[1].'" class="'.$data[2].'">'.$data[0].'</span>';
+		return '<span data-tooltip="'.$data[1].'" class="'.$data[2].'">'.$data[0].'</span>';
 	}
 }

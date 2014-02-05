@@ -7,8 +7,7 @@
 		<script src="http://static.wowhead.com/widgets/power.js"></script>
 		<!-- dev : /js/script.js -->
 		<?php $js = PROD ? '/js/script.min.js?v=58797562341' :
-			array('/components/jquery/jquery.js', '/components/bootstrap/js/tooltip.js', '/components/bootstrap/js/popover.js',
-				'/js/script.js');
+			array('/components/jquery/jquery.js', '/js/mousetooltip.js', '/js/script.js');
 		$t = time();
 		if (is_string($js)): ?>
 		<script src="<?php echo $js ?>"></script>
