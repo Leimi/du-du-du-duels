@@ -6,16 +6,16 @@
 			opts["offset"] = opts["offset"] !== undefined ? opts["offset"] : { x: 10, y: 10 };
 			self.opts = opts;
 			$('#mouse-tooltip').remove();
-			self.$tooltip = $('body').append('<div id="mouse-tooltip"></div>').find('#mouse-tooltip').first();
+			self.$tooltip = $('body').append('<div id="mouse-tooltip" class="mouse-tooltip"></div>').find('#mouse-tooltip').first();
 			self.hide();
 		},
 		show: function(html) {
 			self.$tooltip.html(html);
-			self.$tooltip.removeClass('mouse-tooltip-hidden');
+			self.$tooltip.removeClass('mouse-tooltip--hidden');
 			$(document).on('mousemove.tooltip', self._stickToMouse);
 		},
 		hide: function() {
-			self.$tooltip.addClass('mouse-tooltip-hidden');
+			self.$tooltip.addClass('mouse-tooltip--hidden');
 			$(document).off('mousemove.tooltip');
 		},
 		_stickToMouse: function(e) {

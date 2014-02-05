@@ -14,9 +14,9 @@
 				round($fighter->wins / $fighter->fights * 100).'% wins<br>'.
 				round($fighter->losts / $fighter->fights * 100).'% defeats<br>'.
 				round($fighter->draws / $fighter->fights * 100).'% draws'; ?>">
-			<div class="progress__bar progress__bar--win" style="width: <?php echo $fighter->wins / $fighter->fights * 100 ?>%"></div>
-			<div class="progress__bar progress__bar--lost" style="width: <?php echo $fighter->losts / $fighter->fights * 100 ?>%"></div>
-			<div class="progress__bar progress__bar--draw" style="width: <?php echo $fighter->draws / $fighter->fights * 100 ?>%"></div>
+			<div class="progress__bar progress__bar--cool" style="width: <?php echo $fighter->wins / $fighter->fights * 100 ?>%"></div>
+			<div class="progress__bar progress__bar--notcool" style="width: <?php echo $fighter->losts / $fighter->fights * 100 ?>%"></div>
+			<div class="progress__bar progress__bar--meh" style="width: <?php echo $fighter->draws / $fighter->fights * 100 ?>%"></div>
 		</div>
 	</td>
 

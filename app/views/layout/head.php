@@ -22,7 +22,7 @@
 			<p class="obsolete-browser">You use an <strong>obsolete</strong> browser. <a href="http://browsehappy.com/" target="_blank">Update it</a> to navigate <strong>safely</strong> on the Internet!</p>
 		<![endif]-->
 
-		<div id="header" class="infobar">
+		<div id="header" class="infobar header">
 			<h2 class="header__title">
 				Who's the <em>best</em>?
 
