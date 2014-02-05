@@ -5,7 +5,7 @@ $app->get('/', function() use ($app) {
 	$fightersValues = array_values($fighters);
 	$fightersIds = array_keys($fighters);
 	$_SESSION['fighters'] = $fightersIds;
-	$app->render('fight.php', array('fighters' => $fightersValues));
+	$app->render('fight.php', array('page' => 'fight', 'fighters' => $fightersValues));
 })->name('fight');
 
 $app->post('/fight', function() use ($app) {
