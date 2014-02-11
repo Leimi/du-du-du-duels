@@ -1,11 +1,11 @@
-<?php if (!$app->request()->isAjax()) include(__DIR__ . '/layout/head.php'); ?>
+<?php if (!$this->app->request()->isAjax()) include(__DIR__ . '/layout/head.php'); ?>
 
-<form action="<?php echo $app->urlFor('post-fight') ?>" class="fight" method="POST">
-	<?php if (!empty($fighters)): ?>
+<form action="<?php echo $this->app->urlFor('post-fight') ?>" class="fight" method="POST">
+	<?php if (!empty($this->fighters)): ?>
 
 	<div class="fight__fighters">
 	<?php $type = array('player', 'opponent');
-	foreach ($fighters as $fighterKey => $fighter): ?><div class="fighter fighter--<?php echo $type[$fighterKey] ?>">
+	foreach ($this->fighters as $fighterKey => $fighter): ?><div class="fighter fighter--<?php echo $type[$fighterKey] ?>">
 
 			<input type="hidden" name="<?php echo $type[$fighterKey] ?>_id" value="<?php echo $fighter->id ?>" />
 
@@ -26,13 +26,13 @@
 	</div>
 
 	<div class="fight__skip">
-		<a href="<?php echo $app->urlFor('fight') ?>">Skip this duel</a>
+		<a href="<?php echo $this->app->urlFor('fight') ?>">Skip this duel</a>
 	</div>
 
 
 	<?php endif ?>
 
-	<input type="hidden" name="<?php echo $csrf_key; ?>" value="<?php echo $csrf_token; ?>">
+	<input type="hidden" name="<?php echo $this->csrf_key; ?>" value="<?php echo $this->csrf_token; ?>">
 </form>
 
-<?php if (!$app->request()->isAjax()) include(__DIR__ . '/layout/foot.php'); ?>
+<?php if (!$this->app->request()->isAjax()) include(__DIR__ . '/layout/foot.php'); ?>

@@ -28,9 +28,10 @@ class PlatesView extends \Slim\View
         return $this->_engineInstance;
     }
 
-    public function render($template){
+    public function render($template, $data = null){
         $platesTemplate = new \League\Plates\Template($this->getInstance());
-        $platesTemplate->data($this->all());
+        $data = array_merge($this->data->all(), (array) $data);
+        $platesTemplate->data($data);
         return $platesTemplate->render($template);
     }
 }

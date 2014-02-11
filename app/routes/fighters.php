@@ -22,9 +22,9 @@ $app->get('/top(/)(:id/?)', function($id = null) use ($app) {
 	if ($id && is_numeric($id))
 		$viewVars['details'] = fighterDetails($id);
 
-	$app->render('top.php', $viewVars);
+	$app->render('top', $viewVars);
 })->name('top');
 
 $app->get('/details/:id', function($id = null) use ($app) {
-	$app->render('top-item-details.php', array('details' => fighterDetails($id)));
+	$app->render('top-item-details', array('details' => fighterDetails($id)));
 })->name('details');
