@@ -38,6 +38,7 @@ class Model_Rank extends RedBean_SimpleModel
 		$previousRank = self::lastRankFromXDaysAgo($days);
 		if (!empty($previousRank->id)) {
 			$rank->diff = self::diff( $ids, $previousRank->list );
+			$rank->diff_id = $previousRank->id;
 		}
 
 		R::store($rank);
