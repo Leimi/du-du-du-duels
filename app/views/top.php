@@ -4,7 +4,7 @@
 <p class="warning">Currently, less than <?php echo round($count, ($count > 100 ? -2 : -1)) ?> duels occured in total. That's not much: the charts can change rather quickly.</p>
 <?php endif ?>
 
-<table class="top striped">
+<table class="top striped u-pullLeft">
 	<tr>
 		<th colspan=2 class="with-tooltip" data-tooltip="Put your mouse over rankings to see details">Rank</th>
 		<th class="with-tooltip" data-tooltip="Put your mouse over progress bars to see details">Ratio</th>
@@ -24,5 +24,9 @@
 	}
 	?>
 </table>
+
+<div class="u-pullRight">
+	<?php include(__DIR__ . '/elements/top-item-details.php'); ?>
+</div>
 
 <?php if (!$app->request()->isAjax()) include(__DIR__ . '/layout/foot.php'); ?>

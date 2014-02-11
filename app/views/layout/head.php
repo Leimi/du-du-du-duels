@@ -36,7 +36,7 @@
 			</h2>
 		</div>
 
-		<div id="container">
+		<div id="container" class="u-cf">
 			<?php if (!empty($flash)): ?>
 			<?php foreach ($flash as $type => $message): ?>
 				<p class="flash flash--<?php echo $type ?>"><?php echo $message ?></p>

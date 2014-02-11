@@ -1,5 +1,5 @@
 .top {
-	margin: 0 auto;
+	margin: 0;
 	border-spacing: 3px;
 
 	tr {
@@ -29,7 +29,7 @@
 			text-align: right;
 		}
 
-		.top-item__card-preview {
+		.top-item__name {
 			display: inline-block;
 			background-repeat: no-repeat;
 			background-position: center left;

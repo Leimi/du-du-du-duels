@@ -20,8 +20,8 @@
 		</div>
 	</td>
 
-	<td data-id="<?php echo $fighter->id ?>">
-		<a style='background-image: url("<?php echo Halp::fighterImgPath($fighter, array('thumb' => true)); ?>")' class="top-item__card-preview" href="http://www.hearthhead.com/card=<?php echo $fighter->hhId ?>" target="_blank"><?php echo $fighter->name ?></a>
+	<td data-name="<?php echo $fighter->name ?>">
+		<span style='background-image: url("<?php echo Halp::fighterImgPath($fighter, array('thumb' => true)); ?>")' class="top-item__name"><?php echo $fighter->name ?></span>
 	</td>
 
 </tr>

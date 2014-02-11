@@ -63,4 +63,17 @@ class Model_Fighter extends RedBean_SimpleModel
 			R::store($fighter);
 		}
 	}
+
+	public static function details($id = null) {
+		$fighter = $id && is_numeric($id) ? R::load('fighter', $id) : false;
+		if ($fighter) {
+			$fightdetails = R::find('fightdetails', ' player_id = ?', array($id));
+
+			usort($fightdetails, function($a, $b) {
+				return strcmp($a->fight->created, $b->fight->created)*-1;
+			});
+			$fighter->fightdetails = $fightdetails;
+		}
+		return $fighter;
+	}
 }
