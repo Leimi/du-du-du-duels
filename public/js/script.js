@@ -3,6 +3,8 @@ var wowhead_tooltips = { "colorlinks": true, "iconizelinks": true, "renamelinks"
 (function() {
 	$body = $('body');
 
+	MouseTooltip.init();
+
 	if ( $('html.page--fight').length ) {
 		function clearFightClasses(el) {
 			$('.fighter').removeClass('fighter--loser').removeClass('fighter--winner').removeClass('fighter--draw');
@@ -27,27 +29,6 @@ var wowhead_tooltips = { "colorlinks": true, "iconizelinks": true, "renamelinks"
 		});
 		$body.on('mouseleave blur', '.fighter__img, .fight__draw', function() {
 			clearFightClasses(this);
-		});
-	}
-
-
-	if ( $('html.page--fighters').length ) {
-		function handleTooltip(e, content) {
-			if (!content)
-				content = $(e.currentTarget).attr('data-tooltip');
-			if (e.type == "mouseover")
-				MouseTooltip.show( content );
-			else if (e.type == "click")
-				MouseTooltip.html( content );
-			else
-				MouseTooltip.hide();
-		}
-		MouseTooltip.init({ "3d": false });
-		$body.on('mouseover click mouseout', '.top-item__position', function(e) {
-			handleTooltip(e, $(e.currentTarget).find('[data-tooltip]').attr('data-tooltip') );
-	}	);
-		$body.on('mouseover click mouseout', '.top-item__ratio', function(e) {
-			handleTooltip(e);
 		});
 	}
 })();
