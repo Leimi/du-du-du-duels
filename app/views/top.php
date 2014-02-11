@@ -6,8 +6,8 @@
 
 <table class="top striped">
 	<tr>
-		<th colspan=2>Rank</th>
-		<th>Ratio</th>
+		<th colspan=2 class="with-tooltip" data-tooltip="Put your mouse over rankings to see details">Rank</th>
+		<th class="with-tooltip" data-tooltip="Put your mouse over progress bars to see details">Ratio</th>
 		<th>Card</th>
 	</tr>
 	<?php

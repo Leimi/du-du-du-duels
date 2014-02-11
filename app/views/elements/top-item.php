@@ -3,12 +3,12 @@
 	<td data-rank="<?php echo $rank ?>" data-score="<?php echo $fighter->score ?>" title="Score: <?php echo $fighter->score ?>"><?php echo $rank.'.' ?></td>
 
 	<?php if (!is_null($diff)): ?>
-	<td data-position="<?php echo $diff ?>" class="top-item__position"><?php echo Halp::rankIcon($diff) ?></td>
+	<td data-position="<?php echo $diff ?>" class="top-item__position with-tooltip"><?php echo Halp::rankIcon($diff) ?></td>
 	<?php else: ?>
 	<td></td>
 	<?php endif ?>
 
-	<td data-fights="<?php echo $fighter->fights ?>">
+	<td data-fights="<?php echo $fighter->fights ?>" class="with-tooltip">
 		<?php $tooltip = $fighter->fights.' '.Halp::pluralize('fight', $fighter->fights).'<br>';
 		$tooltip .= '<span class=\'text--cool\'>'.$fighter->wins.' ('.round($fighter->wins / $fighter->fights * 100).'%) '.Halp::pluralize('win', $fighter->wins).'</span><br>';
 		if ($fighter->losts) $tooltip .= '<span class=\'text--notcool\'>'.$fighter->losts.' ('.round($fighter->losts / $fighter->fights * 100).'%) '.Halp::pluralize('defeat', $fighter->losts).'</span><br>';
