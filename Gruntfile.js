@@ -65,7 +65,8 @@ module.exports = function(grunt) {
 					imagesDir: folder + "/img",
 					fontsDir: folder + "/fonts",
 					outputStyle: 'expanded',
-					relativeAssets: true
+					relativeAssets: true,
+					require: ['sass-css-importer']
 				}
 			},
 			dist: {
@@ -76,7 +77,8 @@ module.exports = function(grunt) {
 					imagesDir: distFolder + "/img",
 					fontsDir: distFolder + "/fonts",
 					outputStyle: 'compressed',
-					relativeAssets: true
+					relativeAssets: true,
+					require: ['sass-css-importer']
 				}
 			}
 		},
