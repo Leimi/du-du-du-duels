@@ -26,5 +26,5 @@ $app->get('/top(/)(:id/?)', function($id = null) use ($app) {
 })->name('top');
 
 $app->get('/details/:id', function($id = null) use ($app) {
-	$app->render('elements/top-item-details', array('details' => fighterDetails($id)));
+	$app->render('elements/top-item-details', array('fighter' => fighterDetails($id)));
 })->name('details');

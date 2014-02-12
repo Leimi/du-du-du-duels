@@ -24,5 +24,5 @@
 </table>
 
 <div class="u-pullRight">
-	<?php $this->insert('elements/top-item-details'); ?>
+	<?php $this->insert('elements/top-item-details', array('fighter' => $this->details)); ?>
 </div>
