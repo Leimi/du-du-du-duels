@@ -36,4 +36,16 @@ class Halp {
 		}
 		return '<span data-tooltip="'.$data[1].'" class="'.$data[2].'">'.$data[0].'</span>';
 	}
+
+	public static function fightResult($fightHistory) {
+		$string = '';
+		$fightHistory['detail']->result = $fightHistory['detail']->result*1;
+		if ($fightHistory['detail']->result === Model_Fight::$resultsKeys['win'])
+			$string = 'won';
+		if ($fightHistory['detail']->result === Model_Fight::$resultsKeys['lost'])
+			$string = 'lost';
+		if ($fightHistory['detail']->result === Model_Fight::$resultsKeys['draw'])
+			$string = 'draw';
+		return $string .= ' vs '.$fightHistory['opponent']->name.' ('.$fightHistory['detail']->score_diff.' points)';
+	}
 }
