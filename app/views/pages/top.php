@@ -1,5 +1,3 @@
-<?php if (!$this->app->request()->isAjax()) include(__DIR__ . '/layout/head.php'); ?>
-
 <?php if ($this->remaining > 0): ?>
 <p class="warning">Currently, less than <?php echo round($this->count, ($this->count > 100 ? -2 : -1)) ?> duels occured in total. That's not much: the charts can change rather quickly.</p>
 <?php endif ?>
@@ -17,7 +15,7 @@
 		foreach ($this->fighters as $key => $fighter) {
 			$diff = isset($this->ranks->diff[$key]) ? $this->ranks->diff[$key] : null;
 			$rank = $prevScore === $fighter->score ? $rank : $i;
-			include(__DIR__ . '/elements/top-item.php');
+			$this->insert('elements/top-item', array('rank' => $rank, 'fighter' => $fighter, 'diff' => $diff));
 			$prevScore = $fighter->score;
 			$i++;
 		}
@@ -26,7 +24,5 @@
 </table>
 
 <div class="u-pullRight">
-	<?php include(__DIR__ . '/elements/top-item-details.php'); ?>
+	<?php $this->insert('elements/top-item-details'); ?>
 </div>
-
-<?php if (!$this->app->request()->isAjax()) include(__DIR__ . '/layout/foot.php'); ?>

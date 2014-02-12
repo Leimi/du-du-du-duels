@@ -1,5 +1,3 @@
-<?php if (!$this->app->request()->isAjax()) include(__DIR__ . '/layout/head.php'); ?>
-
 <form action="<?php echo $this->app->urlFor('post-fight') ?>" class="fight" method="POST">
 	<?php if (!empty($this->fighters)): ?>
 
@@ -34,5 +32,3 @@
 
 	<input type="hidden" name="<?php echo $this->csrf_key; ?>" value="<?php echo $this->csrf_token; ?>">
 </form>
-
-<?php if (!$this->app->request()->isAjax()) include(__DIR__ . '/layout/foot.php'); ?>
