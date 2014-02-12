@@ -67,12 +67,20 @@ class Model_Fighter extends RedBean_SimpleModel
 	public static function details($id = null) {
 		$fighter = $id && is_numeric($id) ? R::load('fighter', $id) : false;
 		if ($fighter) {
-			$fightdetails = R::find('fightdetails', ' player_id = ?', array($id));
-
+			$fightdetails = $fighter->ownFightdetails;
 			usort($fightdetails, function($a, $b) {
 				return strcmp($a->fight->created, $b->fight->created)*-1;
 			});
-			$fighter->fightdetails = $fightdetails;
+
+			$history = array();
+			foreach ($fightdetails as $fightdetail) {
+				$history[]= array(
+					'fight' => $fightdetail->fight,
+					'detail' => $fightdetail,
+					'opponent' => reset($fightdetail->fight->withCondition(' fighter_id != ? ', array($fighter->id))->ownFightdetails)->fighter
+				);
+			}
+			$fighter->history = $history;
 		}
 		return $fighter;
 	}

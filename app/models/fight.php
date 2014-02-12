@@ -4,13 +4,13 @@ use RedBean_Facade as R;
 
 class Model_Fight extends RedBean_SimpleModel
 {
-	protected static $results = array(
+	public static $results = array(
 		'lost' => 'win',
 		'win' => 'lost',
 		'draw' => 'draw'
 	);
 
-	protected static $resultsKeys = array(
+	public static $resultsKeys = array(
 		'win' => 1,
 		'lost' => 0,
 		'draw' => 0.5
@@ -50,16 +50,12 @@ class Model_Fight extends RedBean_SimpleModel
 		$fight = R::dispense('fight');
 		list($playerFight, $opponentFight) = R::dispense('fightdetails', 2);
 
-		$playerFight->player_id = $playerId;
-		$playerFight->opponent_id = $opponentId;
 		$playerFight->score_diff = $newPlayerScore - $playerScore;
 		$playerFight->result = self::$resultsKeys[$result];
 		$player->fights++;
 		$player->{$result.'s'}++;
 		$player->score = $newPlayerScore;
 
-		$opponentFight->player_id = $opponentId;
-		$opponentFight->opponent_id = $playerId;
 		$opponentFight->score_diff = $newOpponentScore - $opponentScore;
 		$opponentFight->result = self::$resultsKeys[$opponentResult];
 		$opponent->fights++;
@@ -67,6 +63,8 @@ class Model_Fight extends RedBean_SimpleModel
 		$opponent->score = $newOpponentScore;
 
 		$fight->ownFightdetails = array($playerFight, $opponentFight);
+		$player->ownFightdetails[] = $playerFight;
+		$opponent->ownFightdetails[] = $opponentFight;
 
 		R::begin();
 		try {
