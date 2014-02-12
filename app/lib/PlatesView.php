@@ -30,8 +30,19 @@ class PlatesView extends \Slim\View
 
     public function render($template, $data = null){
         $platesTemplate = new \League\Plates\Template($this->getInstance());
+
         $data = array_merge($this->data->all(), (array) $data);
+
+        if (!isset($data['layout']))
+            $data['layout'] = 'layout/default';
+
+        if (!empty($data['layout'])) {
+            $platesTemplate->layout($data['layout']);
+            unset($data['layout']);
+        }
+
         $platesTemplate->data($data);
+
         return $platesTemplate->render($template);
     }
 }
