@@ -21,7 +21,7 @@
 	</td>
 
 	<td data-name="<?php echo $this->fighter->name ?>">
-		<span style='background-image: url("<?php echo Halp::fighterImgPath($this->fighter, array('thumb' => true)); ?>")' class="top-item__name"><?php echo $this->fighter->name ?></span>
+		<a data-ajax-url="<?php echo $this->app->urlFor('details', array('id' => $this->fighter->id)) ?>" data-ajax-container=".details-container" href="<?php echo $this->app->urlFor('top', array('id' => $this->fighter->id)) ?>" style='background-image: url("<?php echo Halp::fighterImgPath($this->fighter, array('thumb' => true)); ?>")' class="top-item__name"><?php echo $this->fighter->name ?></a>
 	</td>
 
 </tr>

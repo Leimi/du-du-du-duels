@@ -18,6 +18,6 @@
 	?>
 </table>
 
-<div class="u-pullRight">
+<div class="u-pullRight details-container">
 	<?php if (!empty($this->details)) $this->insert('elements/top-item-details', array('fighter' => $this->details)); ?>
 </div>

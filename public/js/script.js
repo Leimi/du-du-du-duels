@@ -6,20 +6,20 @@ var wowhead_tooltips = { "colorlinks": true, "iconizelinks": true, "renamelinks"
 	MouseTooltip.init();
 
 	if ( $('html.page--fight').length ) {
-		function clearFightClasses(el) {
+		var clearFightClasses = function(el) {
 			$('.fighter').removeClass('fighter--loser').removeClass('fighter--winner').removeClass('fighter--draw');
-		}
+		};
 
-		function addWinningFightClasses(el) {
+		var addWinningFightClasses = function(el) {
 			clearFightClasses();
 			var $el = $(el).closest('.fighter').addClass('fighter--winner');
 			$('.fighter').not($el).addClass('fighter--loser');
-		}
+		};
 
-		function addDrawFightClasses(el) {
+		var addDrawFightClasses = function(el) {
 			clearFightClasses();
 			$('.fighter').addClass('fighter--draw');
-		}
+		};
 
 		$body.on('mouseenter focus', '.fighter__img', function() {
 			addWinningFightClasses(this);
@@ -31,4 +31,18 @@ var wowhead_tooltips = { "colorlinks": true, "iconizelinks": true, "renamelinks"
 			clearFightClasses(this);
 		});
 	}
+
+	$body.on('click', 'a[data-ajax-url][data-ajax-container]', function(e) {
+		e.preventDefault();
+		var $link = $(e.currentTarget);
+		$.ajax({
+			url: $link.attr('data-ajax-url'),
+			success: function(result) {
+				$( $link.attr('data-ajax-container') ).html(result);
+			},
+			error: function() {
+				window.location.href = $link.attr('href');
+			}
+		});
+	});
 })();
