@@ -41,11 +41,11 @@ class Halp {
 		$string = '';
 		$fightHistory['detail']->result = $fightHistory['detail']->result*1;
 		if ($fightHistory['detail']->result === Model_Fight::$resultsKeys['win'])
-			$string = 'won';
+			$string = 'Won';
 		if ($fightHistory['detail']->result === Model_Fight::$resultsKeys['lost'])
-			$string = 'lost';
+			$string = 'Lost';
 		if ($fightHistory['detail']->result === Model_Fight::$resultsKeys['draw'])
-			$string = 'draw';
+			$string = 'Draw';
 		return $string .= ' vs '.$fightHistory['opponent']->name.' ('.$fightHistory['detail']->score_diff.' points)';
 	}
 }

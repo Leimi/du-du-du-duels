@@ -1,15 +1,11 @@
 /* normalize.css v2.1.3 | MIT License | git.io/normalize */
-
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
-
 /**
  * Correct `block` display not defined in IE 8/9.
  */
-
 /* line 22, ../components/normalize-css/normalize.css */
-
 article,
 aside,
 details,
@@ -28,9 +24,7 @@ summary {
 /**
  * Correct `inline-block` display not defined in IE 8/9.
  */
-
 /* line 32, ../components/normalize-css/normalize.css */
-
 audio,
 canvas,
 video {
@@ -41,9 +35,7 @@ video {
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-
 /* line 41, ../components/normalize-css/normalize.css */
-
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -53,9 +45,7 @@ audio:not([controls]) {
  * Address `[hidden]` styling not present in IE 8/9.
  * Hide the `template` element in IE, Safari, and Firefox < 22.
  */
-
 /* line 52, ../components/normalize-css/normalize.css */
-
 [hidden],
 template {
   display: none;
@@ -64,15 +54,12 @@ template {
 /* ==========================================================================
    Base
    ========================================================================== */
-
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-
 /* line 66, ../components/normalize-css/normalize.css */
-
 html {
   font-family: sans-serif;
   /* 1 */
@@ -85,9 +72,7 @@ html {
 /**
  * Remove default margin.
  */
-
 /* line 76, ../components/normalize-css/normalize.css */
-
 body {
   margin: 0;
 }
@@ -95,13 +80,10 @@ body {
 /* ==========================================================================
    Links
    ========================================================================== */
-
 /**
  * Remove the gray background color from active links in IE 10.
  */
-
 /* line 88, ../components/normalize-css/normalize.css */
-
 a {
   background: transparent;
 }
@@ -109,9 +91,7 @@ a {
 /**
  * Address `outline` inconsistency between Chrome and other browsers.
  */
-
 /* line 96, ../components/normalize-css/normalize.css */
-
 a:focus {
   outline: thin dotted;
 }
@@ -119,9 +99,7 @@ a:focus {
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-
 /* line 105, ../components/normalize-css/normalize.css */
-
 a:active,
 a:hover {
   outline: 0;
@@ -130,14 +108,11 @@ a:hover {
 /* ==========================================================================
    Typography
    ========================================================================== */
-
 /**
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari 5, and Chrome.
  */
-
 /* line 118, ../components/normalize-css/normalize.css */
-
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
@@ -146,9 +121,7 @@ h1 {
 /**
  * Address styling not present in IE 8/9, Safari 5, and Chrome.
  */
-
 /* line 127, ../components/normalize-css/normalize.css */
-
 abbr[title] {
   border-bottom: 1px dotted;
 }
@@ -156,9 +129,7 @@ abbr[title] {
 /**
  * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
  */
-
 /* line 136, ../components/normalize-css/normalize.css */
-
 b,
 strong {
   font-weight: bold;
@@ -167,9 +138,7 @@ strong {
 /**
  * Address styling not present in Safari 5 and Chrome.
  */
-
 /* line 144, ../components/normalize-css/normalize.css */
-
 dfn {
   font-style: italic;
 }
@@ -177,12 +146,9 @@ dfn {
 /**
  * Address differences between Firefox and other browsers.
  */
-
 /* line 152, ../components/normalize-css/normalize.css */
-
 hr {
   -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -190,9 +156,7 @@ hr {
 /**
  * Address styling not present in IE 8/9.
  */
-
 /* line 162, ../components/normalize-css/normalize.css */
-
 mark {
   background: #ff0;
   color: #000;
@@ -201,9 +165,7 @@ mark {
 /**
  * Correct font family set oddly in Safari 5 and Chrome.
  */
-
 /* line 174, ../components/normalize-css/normalize.css */
-
 code,
 kbd,
 pre,
@@ -215,9 +177,7 @@ samp {
 /**
  * Improve readability of pre-formatted text in all browsers.
  */
-
 /* line 183, ../components/normalize-css/normalize.css */
-
 pre {
   white-space: pre-wrap;
 }
@@ -225,9 +185,7 @@ pre {
 /**
  * Set consistent quote types.
  */
-
 /* line 191, ../components/normalize-css/normalize.css */
-
 q {
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
@@ -235,9 +193,7 @@ q {
 /**
  * Address inconsistent and variable font size in all browsers.
  */
-
 /* line 199, ../components/normalize-css/normalize.css */
-
 small {
   font-size: 80%;
 }
@@ -245,9 +201,7 @@ small {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-
 /* line 208, ../components/normalize-css/normalize.css */
-
 sub,
 sup {
   font-size: 75%;
@@ -257,13 +211,11 @@ sup {
 }
 
 /* line 215, ../components/normalize-css/normalize.css */
-
 sup {
   top: -0.5em;
 }
 
 /* line 219, ../components/normalize-css/normalize.css */
-
 sub {
   bottom: -0.25em;
 }
@@ -271,13 +223,10 @@ sub {
 /* ==========================================================================
    Embedded content
    ========================================================================== */
-
 /**
  * Remove border when inside `a` element in IE 8/9.
  */
-
 /* line 231, ../components/normalize-css/normalize.css */
-
 img {
   border: 0;
 }
@@ -285,9 +234,7 @@ img {
 /**
  * Correct overflow displayed oddly in IE 9.
  */
-
 /* line 239, ../components/normalize-css/normalize.css */
-
 svg:not(:root) {
   overflow: hidden;
 }
@@ -295,13 +242,10 @@ svg:not(:root) {
 /* ==========================================================================
    Figures
    ========================================================================== */
-
 /**
  * Address margin not present in IE 8/9 and Safari 5.
  */
-
 /* line 251, ../components/normalize-css/normalize.css */
-
 figure {
   margin: 0;
 }
@@ -309,13 +253,10 @@ figure {
 /* ==========================================================================
    Forms
    ========================================================================== */
-
 /**
  * Define consistent border, margin, and padding.
  */
-
 /* line 263, ../components/normalize-css/normalize.css */
-
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -326,9 +267,7 @@ fieldset {
  * 1. Correct `color` not being inherited in IE 8/9.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
-
 /* line 274, ../components/normalize-css/normalize.css */
-
 legend {
   border: 0;
   /* 1 */
@@ -341,9 +280,7 @@ legend {
  * 2. Correct font size not being inherited in all browsers.
  * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
  */
-
 /* line 288, ../components/normalize-css/normalize.css */
-
 button,
 input,
 select,
@@ -360,9 +297,7 @@ textarea {
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-
 /* line 300, ../components/normalize-css/normalize.css */
-
 button,
 input {
   line-height: normal;
@@ -374,9 +309,7 @@ input {
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
-
 /* line 312, ../components/normalize-css/normalize.css */
-
 button,
 select {
   text-transform: none;
@@ -389,9 +322,7 @@ select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
-
 /* line 327, ../components/normalize-css/normalize.css */
-
 button,
 html input[type="button"],
 input[type="reset"],
@@ -405,9 +336,7 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-
 /* line 337, ../components/normalize-css/normalize.css */
-
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -417,13 +346,9 @@ html input[disabled] {
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
  * 2. Remove excess padding in IE 8/9/10.
  */
-
 /* line 347, ../components/normalize-css/normalize.css */
-
 input[type="checkbox"],
 input[type="radio"] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -435,9 +360,7 @@ input[type="radio"] {
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
-
 /* line 358, ../components/normalize-css/normalize.css */
-
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -451,9 +374,7 @@ input[type="search"] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-
 /* line 371, ../components/normalize-css/normalize.css */
-
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -462,9 +383,7 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-
 /* line 380, ../components/normalize-css/normalize.css */
-
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -475,9 +394,7 @@ input::-moz-focus-inner {
  * 1. Remove default vertical scrollbar in IE 8/9.
  * 2. Improve readability and alignment in all browsers.
  */
-
 /* line 390, ../components/normalize-css/normalize.css */
-
 textarea {
   overflow: auto;
   /* 1 */
@@ -488,13 +405,10 @@ textarea {
 /* ==========================================================================
    Tables
    ========================================================================== */
-
 /**
  * Remove most spacing between table cells.
  */
-
 /* line 403, ../components/normalize-css/normalize.css */
-
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -503,16 +417,12 @@ table {
 /* ==========================================================================
    Dimension utilities
    ========================================================================== */
-
 /* Intrinsic widths
    ========================================================================== */
-
 /**
  * Make an element shrink wrap its content.
  */
-
 /* line 13, ../components/suit-utils-dimension/dimension.css */
-
 .u-sizeFit,
 .u-sizeFitAlt {
   display: block !important;
@@ -521,7 +431,6 @@ table {
 }
 
 /* line 19, ../components/suit-utils-dimension/dimension.css */
-
 .u-sizeFitAlt {
   float: right !important;
 }
@@ -530,9 +439,7 @@ table {
  * Make an element fill the remaining space.
  * N.B. This will hide overflow.
  */
-
 /* line 28, ../components/suit-utils-dimension/dimension.css */
-
 .u-sizeFill {
   display: block !important;
   overflow: hidden !important;
@@ -544,9 +451,7 @@ table {
  * N.B. Do not use if child elements might be wider than the remaining space.
  * In Chrome, Safari, and Firefox it results in undesired layout.
  */
-
 /* line 40, ../components/suit-utils-dimension/dimension.css */
-
 .u-sizeFillAlt {
   display: table-cell !important;
   max-width: 100% !important;
@@ -556,12 +461,9 @@ table {
 /**
  * Make an element the width of its parent.
  */
-
 /* line 50, ../components/suit-utils-dimension/dimension.css */
-
 .u-sizeFull {
   -moz-box-sizing: border-box !important;
-  -webkit-box-sizing: border-box !important;
   box-sizing: border-box !important;
   display: block !important;
   width: 100% !important;
@@ -569,47 +471,39 @@ table {
 
 /* Proportional widths
    ========================================================================== */
-
 /**
  * Specify the proportional width of an object.
  * Intentional redundancy build into each set of unit classes.
  * Supports: 2, 3, 4, 5, 6, 8, 10, 12 part
  */
-
 /* line 66, ../components/suit-utils-dimension/dimension.css */
-
 .u-size1of12 {
   width: 8.333% !important;
 }
 
 /* line 70, ../components/suit-utils-dimension/dimension.css */
-
 .u-size1of10 {
   width: 10% !important;
 }
 
 /* line 74, ../components/suit-utils-dimension/dimension.css */
-
 .u-size1of8 {
   width: 12.5% !important;
 }
 
 /* line 79, ../components/suit-utils-dimension/dimension.css */
-
 .u-size1of6,
 .u-size2of12 {
   width: 16.667% !important;
 }
 
 /* line 84, ../components/suit-utils-dimension/dimension.css */
-
 .u-size1of5,
 .u-size2of10 {
   width: 20% !important;
 }
 
 /* line 90, ../components/suit-utils-dimension/dimension.css */
-
 .u-size1of4,
 .u-size2of8,
 .u-size3of12 {
@@ -617,13 +511,11 @@ table {
 }
 
 /* line 94, ../components/suit-utils-dimension/dimension.css */
-
 .u-size3of10 {
   width: 30% !important;
 }
 
 /* line 100, ../components/suit-utils-dimension/dimension.css */
-
 .u-size1of3,
 .u-size2of6,
 .u-size4of12 {
@@ -631,26 +523,22 @@ table {
 }
 
 /* line 104, ../components/suit-utils-dimension/dimension.css */
-
 .u-size3of8 {
   width: 37.5% !important;
 }
 
 /* line 109, ../components/suit-utils-dimension/dimension.css */
-
 .u-size2of5,
 .u-size4of10 {
   width: 40% !important;
 }
 
 /* line 113, ../components/suit-utils-dimension/dimension.css */
-
 .u-size5of12 {
   width: 41.667% !important;
 }
 
 /* line 122, ../components/suit-utils-dimension/dimension.css */
-
 .u-size1of2,
 .u-size2of4,
 .u-size3of6,
@@ -661,26 +549,22 @@ table {
 }
 
 /* line 126, ../components/suit-utils-dimension/dimension.css */
-
 .u-size7of12 {
   width: 58.333% !important;
 }
 
 /* line 131, ../components/suit-utils-dimension/dimension.css */
-
 .u-size3of5,
 .u-size6of10 {
   width: 60% !important;
 }
 
 /* line 135, ../components/suit-utils-dimension/dimension.css */
-
 .u-size5of8 {
   width: 62.5% !important;
 }
 
 /* line 141, ../components/suit-utils-dimension/dimension.css */
-
 .u-size2of3,
 .u-size4of6,
 .u-size8of12 {
@@ -688,13 +572,11 @@ table {
 }
 
 /* line 145, ../components/suit-utils-dimension/dimension.css */
-
 .u-size7of10 {
   width: 70% !important;
 }
 
 /* line 151, ../components/suit-utils-dimension/dimension.css */
-
 .u-size3of4,
 .u-size6of8,
 .u-size9of12 {
@@ -702,33 +584,28 @@ table {
 }
 
 /* line 156, ../components/suit-utils-dimension/dimension.css */
-
 .u-size4of5,
 .u-size8of10 {
   width: 80% !important;
 }
 
 /* line 161, ../components/suit-utils-dimension/dimension.css */
-
 .u-size5of6,
 .u-size10of12 {
   width: 83.333% !important;
 }
 
 /* line 165, ../components/suit-utils-dimension/dimension.css */
-
 .u-size7of8 {
   width: 87.5% !important;
 }
 
 /* line 169, ../components/suit-utils-dimension/dimension.css */
-
 .u-size9of10 {
   width: 90% !important;
 }
 
 /* line 173, ../components/suit-utils-dimension/dimension.css */
-
 .u-size11of12 {
   width: 91.667% !important;
 }
@@ -736,32 +613,26 @@ table {
 /* ==========================================================================
    Layout utilities
    ========================================================================== */
-
 /**
  * Vertical alignment utilities
  * Depends on an appropriate `display` value.
  */
-
 /* line 10, ../components/suit-utils-layout/layout.css */
-
 .u-alignTop {
   vertical-align: top !important;
 }
 
 /* line 14, ../components/suit-utils-layout/layout.css */
-
 .u-alignMiddle {
   vertical-align: middle !important;
 }
 
 /* line 18, ../components/suit-utils-layout/layout.css */
-
 .u-alignBaseline {
   vertical-align: baseline !important;
 }
 
 /* line 22, ../components/suit-utils-layout/layout.css */
-
 .u-alignBottom {
   vertical-align: bottom !important;
 }
@@ -779,9 +650,7 @@ table {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-
 /* line 41, ../components/suit-utils-layout/layout.css */
-
 .u-cf:before,
 .u-cf:after {
   content: " ";
@@ -791,7 +660,6 @@ table {
 }
 
 /* line 46, ../components/suit-utils-layout/layout.css */
-
 .u-cf:after {
   clear: both;
 }
@@ -805,9 +673,7 @@ table {
  * N.B. This will clip overflow. Use the alternative method below if this is
  * problematic.
  */
-
 /* line 60, ../components/suit-utils-layout/layout.css */
-
 .u-nbfc {
   overflow: hidden !important;
 }
@@ -823,9 +689,7 @@ table {
  * N.B. This breaks down in some browsers when elements within this element
  * exceed its width.
  */
-
 /* line 76, ../components/suit-utils-layout/layout.css */
-
 .u-nbfcAlt {
   display: table-cell !important;
   /* 1 */
@@ -836,15 +700,12 @@ table {
 /**
  * Floats
  */
-
 /* line 85, ../components/suit-utils-layout/layout.css */
-
 .u-pullLeft {
   float: left !important;
 }
 
 /* line 89, ../components/suit-utils-layout/layout.css */
-
 .u-pullRight {
   float: right !important;
 }
@@ -855,16 +716,13 @@ table {
  * Float an object left or right, and include some space between the object and
  * proceeding objects.
  */
-
 /* line 100, ../components/suit-utils-layout/layout.css */
-
 .u-objLeft {
   float: left !important;
   margin-right: 10px;
 }
 
 /* line 105, ../components/suit-utils-layout/layout.css */
-
 .u-objRight {
   float: right !important;
   margin-left: 10px;
@@ -875,9 +733,7 @@ table {
  * 2. Guard against `img {max-width:100%}` hiding this utility's images in
  *    IE 8.
  */
-
 /* line 117, ../components/suit-utils-layout/layout.css */
-
 .u-objLeft img,
 .u-objRight img {
   display: block;
@@ -887,19 +743,15 @@ table {
 }
 
 /* suit-utils-link v0.2.0 | MIT License | github.com/suitcss */
-
 /* ==========================================================================
    Link-specific utilities
    ========================================================================== */
-
 /**
  * Clean link
  *
  * A link without any text-decoration at all.
  */
-
 /* line 16, ../components/suit-utils-link/link.css */
-
 .u-linkClean,
 .u-linkClean:hover,
 .u-linkClean:focus,
@@ -921,9 +773,7 @@ table {
  *     <span class="u-linkComplex-target">target</span>
  * </a>
  */
-
 /* line 38, ../components/suit-utils-link/link.css */
-
 .u-linkComplex,
 .u-linkComplex:hover,
 .u-linkComplex:focus,
@@ -932,7 +782,6 @@ table {
 }
 
 /* line 44, ../components/suit-utils-link/link.css */
-
 .u-linkComplex:hover .u-linkComplex-target,
 .u-linkComplex:focus .u-linkComplex-target,
 .u-linkComplex:active .u-linkComplex-target {
@@ -944,9 +793,7 @@ table {
  *
  * Combination of traits commonly used in vertical navigation lists.
  */
-
 /* line 57, ../components/suit-utils-link/link.css */
-
 .u-linkBlock,
 .u-linkBlock:hover,
 .u-linkBlock:focus,
@@ -986,9 +833,7 @@ table {
  *     <a role="presentation">Button content</a>
  * </button>
  */
-
 /* line 94, ../components/suit-utils-link/link.css */
-
 .u-linkPseudo {
   display: inline-block;
   padding: 0;
@@ -1001,7 +846,6 @@ table {
 }
 
 /* line 107, ../components/suit-utils-link/link.css */
-
 .u-linkPseudo:hover,
 .u-linkPseudo:focus,
 .u-linkPseudo:active {
@@ -1012,25 +856,20 @@ table {
 /* ==========================================================================
    States utilities
    ========================================================================== */
-
 /**
  * Indicate that interaction will result in an (in)action.
  */
-
 /* line 9, ../components/suit-utils-state/state.css */
-
 .u-isActionable {
   cursor: pointer !important;
 }
 
 /* line 13, ../components/suit-utils-state/state.css */
-
 .u-isDisabled {
   cursor: default !important;
 }
 
 /* line 17, ../components/suit-utils-state/state.css */
-
 .u-isDraggable {
   cursor: move !important;
 }
@@ -1038,9 +877,7 @@ table {
 /**
  * Completely remove from the flow and screen readers.
  */
-
 /* line 25, ../components/suit-utils-state/state.css */
-
 .u-isHidden {
   display: none !important;
   visibility: hidden !important;
@@ -1049,9 +886,7 @@ table {
 /**
  * Completely remove from the flow but leave available to screen readers.
  */
-
 /* line 34, ../components/suit-utils-state/state.css */
-
 .u-isHiddenVisually {
   position: absolute !important;
   overflow: hidden !important;
@@ -1065,15 +900,12 @@ table {
 /**
  * Control visibility without affecting flow.
  */
-
 /* line 48, ../components/suit-utils-state/state.css */
-
 .u-isInvisible {
   visibility: hidden !important;
 }
 
 /* line 52, ../components/suit-utils-state/state.css */
-
 .u-isVisible {
   visibility: visible !important;
 }
@@ -1081,25 +913,20 @@ table {
 /* ==========================================================================
    Text utilities
    ========================================================================== */
-
 /**
  * Horizontal text alignment
  */
-
 /* line 9, ../components/suit-utils-text/text.css */
-
 .u-textCenter {
   text-align: center !important;
 }
 
 /* line 13, ../components/suit-utils-text/text.css */
-
 .u-textLeft {
   text-align: left !important;
 }
 
 /* line 17, ../components/suit-utils-text/text.css */
-
 .u-textRight {
   text-align: right !important;
 }
@@ -1115,9 +942,7 @@ table {
  * 2. Fix for IE 8/9 if `word-wrap: break-word` is in effect on ancestor
  *    nodes.
  */
-
 /* line 33, ../components/suit-utils-text/text.css */
-
 .u-textTruncate {
   max-width: 100%;
   /* 1 */
@@ -1133,9 +958,7 @@ table {
  *
  * Break strings when their length exceeds the width of their container.
  */
-
 /* line 47, ../components/suit-utils-text/text.css */
-
 .u-textBreak {
   word-wrap: break-word !important;
 }
@@ -1143,9 +966,7 @@ table {
 /**
  * Inherit the ancestor's text color.
  */
-
 /* line 55, ../components/suit-utils-text/text.css */
-
 .u-textInheritColor {
   color: inherit !important;
 }
@@ -1153,9 +974,7 @@ table {
 /**
  * Inherit the ancestor's text color for all states.
  */
-
 /* line 66, ../components/suit-utils-text/text.css */
-
 .u-textInheritAllColor,
 .u-textInheritAllColor:hover,
 .u-textInheritAllColor:focus,
@@ -1164,11 +983,9 @@ table {
 }
 
 /* suit-arrange v0.2.0 | MIT License | github.com/suitcss */
-
 /* ==========================================================================
    Arrange cells
    ========================================================================== */
-
 /**
  * This component lets you lay out a row of cells in various ways. You can
  * specify whether a cell should be wide enough to fit its content, or take up
@@ -1197,7 +1014,6 @@ table {
  *     </div>
  * </div>
  */
-
 /**
  * 1. Protect against the component expanding beyond the confines of its
  *    container if properties affecting the box-model are applied to the
@@ -1207,9 +1023,7 @@ table {
  * 4. Make sure the component fills at least the full width of its parent.
  * 5. Reset the table-layout algorithm in case a component is nested.
  */
-
 /* line 46, ../components/suit-arrange/arrange.css */
-
 .Arrange {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1236,9 +1050,7 @@ table {
  *    Margin has no effect when coupled with `display: table-cell`.
  * 2. All cells are top-aligned by default
  */
-
 /* line 68, ../components/suit-arrange/arrange.css */
-
 .Arrange-sizeFill,
 .Arrange-sizeFit {
   display: table-cell;
@@ -1251,9 +1063,7 @@ table {
 /**
  * Make sure the main content block expands to fill the remaining space.
  */
-
 /* line 78, ../components/suit-arrange/arrange.css */
-
 .Arrange-sizeFill {
   width: 100%;
 }
@@ -1266,9 +1076,7 @@ table {
  * and IE to constrain image dimensions for other layouts, large images will
  * need their width set to `100%`.
  */
-
 /* line 91, ../components/suit-arrange/arrange.css */
-
 .Arrange-sizeFill img {
   height: auto;
   max-width: 100%;
@@ -1279,9 +1087,7 @@ table {
  * 'Arrange-sizeFit' cannot be fluid, otherwise they lose their ability to
  * provide size to a cell.
  */
-
 /* line 102, ../components/suit-arrange/arrange.css */
-
 .Arrange-sizeFit img {
   max-width: none !important;
   width: auto !important;
@@ -1289,16 +1095,13 @@ table {
 
 /* Vertical alignment modifiers
    ========================================================================== */
-
 /* line 111, ../components/suit-arrange/arrange.css */
-
 .Arrange--middle .Arrange-sizeFill,
 .Arrange--middle .Arrange-sizeFit {
   vertical-align: middle;
 }
 
 /* line 116, ../components/suit-arrange/arrange.css */
-
 .Arrange--bottom .Arrange-sizeFill,
 .Arrange--bottom .Arrange-sizeFit {
   vertical-align: bottom;
@@ -1306,14 +1109,11 @@ table {
 
 /* Equal-width modifier
    ========================================================================== */
-
 /**
  * This layout algorithm will create equal-width table cells, irrespective of
  * the width of their content.
  */
-
 /* line 128, ../components/suit-arrange/arrange.css */
-
 .Arrange--equal {
   table-layout: fixed;
 }
@@ -1325,20 +1125,16 @@ table {
  * It's recommended that only 'Arrange-sizeFill' be used for equal width cells.
  * Their inner images will automatically be responsive.
  */
-
 /* line 141, ../components/suit-arrange/arrange.css */
-
 .Arrange--equal > .Arrange-sizeFill,
 .Arrange--equal > .Arrange-sizeFit {
   width: 1%;
 }
 
 /* suit-button v3.0.0 | MIT License | github.com/suitcss */
-
 /* ==========================================================================
    SUIT: Button
    ========================================================================== */
-
 /**
  * The button classes are best applied to links, buttons, and submit inputs.
  * These components can be used in forms, as calls to action, or as part of the
@@ -1350,7 +1146,6 @@ table {
  * <button class="Button [Button--modifier]" type="submit">Button text</button>
  * <input class="Button [Button--modifier]" type="submit" value="Button text">
  */
-
 /**
  * Button template
  *
@@ -1366,16 +1161,13 @@ table {
  * 7. Prevent button text from being selectable.
  * 8. Make sure `input` will wrap text across multiple lines.
  */
-
 /* line 35, ../components/suit-button/button.css */
-
 .Button {
   -webkit-appearance: none;
   /* 1 */
   background: transparent;
   border: 1px solid;
   -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* 2 */
   color: inherit;
@@ -1406,9 +1198,7 @@ table {
 /**
  * UI states
  */
-
 /* line 65, ../components/suit-button/button.css */
-
 .Button:hover,
 .Button:focus,
 .Button:active {
@@ -1416,7 +1206,6 @@ table {
 }
 
 /* line 70, ../components/suit-button/button.css */
-
 .Button:disabled,
 .Button.is-disabled {
   cursor: default;
@@ -1425,9 +1214,7 @@ table {
 /**
  * Remove excess padding and border in Firefox 4+
  */
-
 /* line 78, ../components/suit-button/button.css */
-
 .Button::-moz-focus-inner {
   border: 0;
   padding: 0;
@@ -1436,7 +1223,6 @@ table {
 /* ==========================================================================
    Grid
    ========================================================================== */
-
 /**
  * Core grid component
  * Make use of dimension utilities, or components that extend 'grid' in order
@@ -1456,10 +1242,8 @@ table {
  *     <div class="Grid-cell u-size1of3"></div>
  * </div>
  */
-
 /* Grid container
    ========================================================================== */
-
 /**
  * All content must be contained within descendent `Grid-cell` elements.
  *
@@ -1471,9 +1255,7 @@ table {
  *    objects.
  * 3. Protect against WebKit bug with optimizelegibility.
  */
-
 /* line 40, ../components/suit-grid/grid.css */
-
 .Grid {
   display: block;
   padding: 0;
@@ -1487,9 +1269,7 @@ table {
 }
 
 /* Opera hack */
-
 /* line 52, ../components/suit-grid/grid.css */
-
 .opera:-o-prefocus,
 .Grid {
   word-spacing: -0.43em;
@@ -1501,16 +1281,13 @@ table {
  * Allows for automatic unit centering irrespective of the number of
  * units in the grid.
  */
-
 /* line 62, ../components/suit-grid/grid.css */
-
 .Grid--center {
   text-align: center;
 }
 
 /* Grid cell
    ========================================================================== */
-
 /**
  * No explicit width by default. Rely on combining `Grid-cell` with a dimension
  * utility or component that extends 'grid'.
@@ -1520,9 +1297,7 @@ table {
  * 3. Keeps content correctly aligned with the grid direction.
  * 4. Reset text defaults.
  */
-
 /* line 79, ../components/suit-grid/grid.css */
-
 .Grid-cell {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1549,9 +1324,7 @@ table {
  * Set a specific unit to be horizontally centered. Doesn't affect
  * any other units. Can still contain a child `Grid` object.
  */
-
 /* line 100, ../components/suit-grid/grid.css */
-
 .Grid-cell--center {
   display: block;
   margin: 0 auto;
@@ -1574,7 +1347,6 @@ table {
 }
 
 /* line 12, ../scss/_icons.scss */
-
 [class*="icon-"] {
   font-family: 'icons';
   speak: none;
@@ -1589,127 +1361,106 @@ table {
 }
 
 /* line 26, ../scss/_icons.scss */
-
 .icon-home:before {
   content: "\e600";
 }
 
 /* line 29, ../scss/_icons.scss */
-
 .icon-home2:before {
   content: "\e601";
 }
 
 /* line 32, ../scss/_icons.scss */
-
 .icon-close:before {
   content: "\e602";
 }
 
 /* line 35, ../scss/_icons.scss */
-
 .icon-checkmark:before {
   content: "\e603";
 }
 
 /* line 38, ../scss/_icons.scss */
-
 .icon-checkmark2:before {
   content: "\e604";
 }
 
 /* line 41, ../scss/_icons.scss */
-
 .icon-minus:before {
   content: "\e605";
 }
 
 /* line 44, ../scss/_icons.scss */
-
 .icon-plus:before {
   content: "\e606";
 }
 
 /* line 47, ../scss/_icons.scss */
-
 .icon-facebook:before {
   content: "\e608";
 }
 
 /* line 50, ../scss/_icons.scss */
-
 .icon-twitter:before {
   content: "\e609";
 }
 
 /* line 53, ../scss/_icons.scss */
-
 .icon-reddit:before {
   content: "\e60a";
 }
 
 /* line 56, ../scss/_icons.scss */
-
 .icon-arrow-up:before {
   content: "\e60b";
 }
 
 /* line 59, ../scss/_icons.scss */
-
 .icon-arrow-right:before {
   content: "\e60c";
 }
 
 /* line 62, ../scss/_icons.scss */
-
 .icon-arrow-down:before {
   content: "\e60d";
 }
 
 /* line 65, ../scss/_icons.scss */
-
 .icon-arrow-left:before {
   content: "\e60e";
 }
 
 /* line 68, ../scss/_icons.scss */
-
 .icon-warning:before {
   content: "\e60f";
 }
 
 /* line 71, ../scss/_icons.scss */
-
 .icon-spam:before {
   content: "\e610";
 }
 
 /* line 74, ../scss/_icons.scss */
-
 .icon-checkmark-circle:before {
   content: "\e611";
 }
 
 /* line 77, ../scss/_icons.scss */
-
 .icon-cancel-circle:before {
   content: "\e612";
 }
 
 /* line 80, ../scss/_icons.scss */
-
 .icon-small-arrow-up-right:before {
   content: "\e607";
 }
 
 /* line 83, ../scss/_icons.scss */
-
 .icon-info:before {
   content: "\e613";
 }
 
 /* line 3, ../scss/_base.scss */
-
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1717,28 +1468,19 @@ table {
 }
 
 /* line 7, ../scss/_base.scss */
-
-body,
-button,
-select,
-input,
-textarea,
-label {
+body, button, select, input, textarea, label {
   color: #222222;
   font-family: Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
   line-height: 1.4;
 }
 
 /* line 3, ../scss/_helpers.scss */
-
 .ir {
   border: 0;
   overflow: hidden;
   *text-indent: -9999px;
 }
-
 /* line 28, ../scss/_mixins.scss */
-
 .ir:before {
   content: "";
   display: block;
@@ -1747,14 +1489,12 @@ label {
 }
 
 /* line 7, ../scss/_helpers.scss */
-
 .hidden {
   display: none !important;
   visibility: hidden;
 }
 
 /* line 11, ../scss/_helpers.scss */
-
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -1765,11 +1505,8 @@ label {
   position: absolute;
   width: 1px;
 }
-
 /* line 62, ../scss/_mixins.scss */
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
   clip: auto;
   height: auto;
   margin: 0;
@@ -1779,34 +1516,26 @@ label {
 }
 
 /* line 15, ../scss/_helpers.scss */
-
 .invisible {
   visibility: hidden;
 }
 
 /* line 78, ../scss/_mixins.scss */
-
-.cf:before,
-.cf:after {
+.cf:before, .cf:after {
   content: " ";
   display: table;
 }
-
 /* line 82, ../scss/_mixins.scss */
-
 .cf:after {
   clear: both;
 }
-
 /* line 83, ../scss/_mixins.scss */
-
 .cf {
   *zoom: 1;
 }
 
 @media only screen and (max-width: 640px) {
   /* line 23, ../scss/_helpers.scss */
-
   .no-small {
     display: none !important;
     visibility: hidden;
@@ -1815,7 +1544,6 @@ label {
 
 @media only screen and (min-width: 641px) and (max-width: 979px) {
   /* line 29, ../scss/_helpers.scss */
-
   .no-medium {
     display: none !important;
     visibility: hidden;
@@ -1824,7 +1552,6 @@ label {
 
 @media only screen and (min-width: 980px) {
   /* line 35, ../scss/_helpers.scss */
-
   .no-large {
     display: none !important;
     visibility: hidden;
@@ -1833,16 +1560,13 @@ label {
 
 @media only screen and (min-width: 641px) and (max-width: 979px) {
   /* line 41, ../scss/_helpers.scss */
-
   .only-small {
     display: none !important;
     visibility: hidden;
   }
 }
-
 @media only screen and (min-width: 980px) {
   /* line 41, ../scss/_helpers.scss */
-
   .only-small {
     display: none !important;
     visibility: hidden;
@@ -1851,16 +1575,13 @@ label {
 
 @media only screen and (max-width: 640px) {
   /* line 50, ../scss/_helpers.scss */
-
   .only-medium {
     display: none !important;
     visibility: hidden;
   }
 }
-
 @media only screen and (min-width: 980px) {
   /* line 50, ../scss/_helpers.scss */
-
   .only-medium {
     display: none !important;
     visibility: hidden;
@@ -1869,16 +1590,13 @@ label {
 
 @media only screen and (max-width: 640px) {
   /* line 59, ../scss/_helpers.scss */
-
   .only-large {
     display: none !important;
     visibility: hidden;
   }
 }
-
 @media only screen and (min-width: 641px) and (max-width: 979px) {
   /* line 59, ../scss/_helpers.scss */
-
   .only-large {
     display: none !important;
     visibility: hidden;
@@ -1886,7 +1604,6 @@ label {
 }
 
 /* line 1, ../scss/_components.scss */
-
 .website-title {
   color: #69572e;
   font-family: Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
@@ -1894,7 +1611,6 @@ label {
 }
 
 /* line 11, ../scss/_components.scss */
-
 .header__title {
   font-size: 64px;
   margin: 0.4em auto;
@@ -1902,32 +1618,27 @@ label {
 }
 
 /* line 17, ../scss/_components.scss */
-
 .header__subtitle {
   font-family: Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
   font-size: 19.2px;
 }
 
 /* line 22, ../scss/_components.scss */
-
 .text--cool {
   color: #1eff00;
 }
 
 /* line 26, ../scss/_components.scss */
-
 .text--meh {
   color: #ffd100;
 }
 
 /* line 30, ../scss/_components.scss */
-
 .text--notcool {
   color: #ff4040;
 }
 
 /* line 34, ../scss/_components.scss */
-
 .hearthstone-button {
   font-family: Hearthstone, Georgia, 'DejaVu Serif', Norasi, serif;
   color: #69572e;
@@ -1936,37 +1647,29 @@ label {
 }
 
 /* line 41, ../scss/_components.scss */
-
-.box--green,
-.fighter.fighter--winner {
+.box--green, .fighter.fighter--winner {
   background: rgba(30, 255, 0, 0.1);
   border-color: rgba(24, 204, 0, 0.5);
 }
 
 /* line 46, ../scss/_components.scss */
-
 .box--red {
   background: rgba(255, 64, 64, 0.1);
   border-color: rgba(255, 13, 13, 0.5);
 }
 
 /* line 51, ../scss/_components.scss */
-
 .box--yellow {
   background: rgba(255, 209, 0, 0.1);
   border-color: rgba(204, 167, 0, 0.5);
 }
 
 /* line 56, ../scss/_components.scss */
-
-.transition,
-.fighter {
-  -webkit-transition: all 0.1s linear;
+.transition, .fighter {
   transition: all 0.1s linear;
 }
 
 /* line 60, ../scss/_components.scss */
-
 .progress {
   height: 20px;
   overflow: hidden;
@@ -1976,7 +1679,6 @@ label {
 }
 
 /* line 68, ../scss/_components.scss */
-
 .progress__bar {
   float: left;
   width: 0;
@@ -1992,59 +1694,50 @@ label {
 }
 
 /* line 82, ../scss/_components.scss */
-
 .progress__bar--cool {
   background-color: #5cb85c;
   background-color: #27ae60;
 }
 
 /* line 87, ../scss/_components.scss */
-
 .progress__bar--meh {
   background-color: #f0ad4e;
   background-color: #f1c40f;
 }
 
 /* line 92, ../scss/_components.scss */
-
 .progress__bar--notcool {
   background-color: #d9534f;
   background-color: #e74c3c;
 }
 
 /* line 97, ../scss/_components.scss */
-
 .rank {
   font-weight: bold;
   font-family: Georgia;
 }
 
 /* line 102, ../scss/_components.scss */
-
 .rank--up {
   color: #27ae60;
 }
 
 /* line 106, ../scss/_components.scss */
-
 .rank--down {
   color: #e74c3c;
 }
 
 /* line 110, ../scss/_components.scss */
-
 .rank--new {
   color: #9b59b6;
 }
 
 /* line 114, ../scss/_components.scss */
-
 .rank--still {
   color: #3498db;
 }
 
 /* line 118, ../scss/_components.scss */
-
 .mouse-tooltip {
   position: absolute;
   top: 0;
@@ -2063,26 +1756,22 @@ label {
   font-style: italic;
   border-radius: 4px;
   border: 1px solid #bbb;
-  -webkit-box-shadow: 0 0 5px #222;
   box-shadow: 0 0 5px #222;
   padding: 4px;
 }
 
 /* line 141, ../scss/_components.scss */
-
 .mouse-tooltip--hidden {
   display: none !important;
 }
 
 /* line 1, ../scss/pages/_fight.scss */
-
 .fight {
   text-align: center;
   display: inline-block;
 }
 
 /* line 10, ../scss/pages/_fight.scss */
-
 .fighter,
 .fight__between {
   display: inline-block;
@@ -2090,7 +1779,6 @@ label {
 }
 
 /* line 15, ../scss/pages/_fight.scss */
-
 .fighter {
   border-radius: 3px;
   padding: 30px 10px;
@@ -2098,14 +1786,12 @@ label {
 }
 
 /* line 27, ../scss/pages/_fight.scss */
-
 .fighter--loser,
 .fighter.fighter--draw {
   opacity: 0.6;
 }
 
 /* line 34, ../scss/pages/_fight.scss */
-
 .fighter__img-wrapper,
 .fighter__more-info
 .fight__vs-wrapper,
@@ -2115,7 +1801,6 @@ label {
 }
 
 /* line 40, ../scss/pages/_fight.scss */
-
 .fighter__img-wrapper,
 .fight__vs-wrapper {
   overflow: hidden;
@@ -2125,21 +1810,16 @@ label {
 }
 
 /* line 47, ../scss/pages/_fight.scss */
-
 .fighter__img {
   position: relative;
   top: -36px;
 }
-
 /* line 52, ../scss/pages/_fight.scss */
-
-.fighter__img:active,
-.fighter__img:focus {
+.fighter__img:active, .fighter__img:focus {
   outline: none;
 }
 
 /* line 61, ../scss/pages/_fight.scss */
-
 .fight__vs {
   width: 100px;
   text-align: center;
@@ -2148,14 +1828,12 @@ label {
 }
 
 /* line 68, ../scss/pages/_fight.scss */
-
 .fight__draw {
   display: inline-block;
   margin: 0 auto;
 }
 
 /* line 73, ../scss/pages/_fight.scss */
-
 .fight__skip {
   float: right;
   margin: 30px 0;
@@ -2163,137 +1841,94 @@ label {
 }
 
 /* line 1, ../scss/pages/_top.scss */
-
 .top {
   margin: 0;
   border-spacing: 3px;
 }
-
 /* line 6, ../scss/pages/_top.scss */
-
 .top tr:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
-
 /* line 9, ../scss/pages/_top.scss */
-
 .top tr:hover .progress {
   opacity: 1;
 }
-
 /* line 14, ../scss/pages/_top.scss */
-
 .top td {
   padding: 6px;
 }
-
 /* line 16, ../scss/pages/_top.scss */
-
 .top td:first-child {
   border-radius: 3px 0 0 3px;
 }
-
 /* line 19, ../scss/pages/_top.scss */
-
 .top td:last-child {
   border-radius: 0 3px 3px 0;
 }
-
 /* line 24, ../scss/pages/_top.scss */
-
 .top td[data-position] {
   text-align: center;
 }
-
 /* line 28, ../scss/pages/_top.scss */
-
 .top td[data-rank] {
   text-align: right;
 }
-
 /* line 32, ../scss/pages/_top.scss */
-
 .top .top-item__name {
   display: inline-block;
   background-repeat: no-repeat;
   background-position: center left;
-  -webkit-background-size: auto 25px;
   background-size: auto 25px;
   padding-left: 80px;
 }
-
 /* line 40, ../scss/pages/_top.scss */
-
 .top .progress {
   height: 25px;
   width: 75px;
 }
 
-/* line 49, ../scss/pages/_top.scss */
-
-.fighter__history-item:first-letter {
-  text-transform: uppercase;
-}
-
 /* line 1, ../scss/_main.scss */
-
 body {
   background: #e9d6ab;
 }
 
 /* line 5, ../scss/_main.scss */
-
 a {
   color: #222222;
   border-bottom: 1px solid #c79a34;
   text-decoration: none;
   padding: 0 0 3px;
 }
-
 /* line 11, ../scss/_main.scss */
-
-a:hover,
-a:focus {
+a:hover, a:focus {
   border-bottom-color: transparent;
   color: #0055ab;
 }
-
 /* line 15, ../scss/_main.scss */
-
 a:active {
   color: #003c78;
   border-bottom-color: #003c78;
 }
 
 /* line 21, ../scss/_main.scss */
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   font-family: Hearthstone, Georgia, 'DejaVu Serif', Norasi, serif;
 }
 
 /* line 26, ../scss/_main.scss */
-
 #container {
   max-width: 800px;
   margin: 0 auto;
 }
 
 /* line 31, ../scss/_main.scss */
-
 #footer {
   margin: 100px auto 0;
   padding: 20px;
   text-align: center;
 }
-
 /* line 36, ../scss/_main.scss */
-
 #footer h1 {
   margin: 0;
   padding: 0;
