@@ -1,9 +1,9 @@
 <tr>
 
-	<td data-rank="<?php echo $this->rank ?>" data-score="<?php echo $this->fighter->score ?>" title="Score: <?php echo $this->fighter->score ?>"><?php echo $this->rank.'.' ?></td>
+	<td data-rank="<?php echo $this->fighter->rank ?>" data-score="<?php echo $this->fighter->score ?>" title="Score: <?php echo $this->fighter->score ?>"><?php echo $this->fighter->rank.'.' ?></td>
 
-	<?php if (!is_null($this->diff)): ?>
-	<td data-position="<?php echo $this->diff ?>" class="top-item__position with-tooltip"><?php echo Halp::rankIcon($this->diff) ?></td>
+	<?php if (!is_null($this->fighter->diff)): ?>
+	<td data-position="<?php echo $this->fighter->diff ?>" class="top-item__position with-tooltip"><?php echo Halp::rankIcon($this->fighter->diff) ?></td>
 	<?php else: ?>
 	<td></td>
 	<?php endif ?>

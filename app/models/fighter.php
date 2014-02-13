@@ -31,18 +31,28 @@ class Model_Fighter extends RedBean_SimpleModel
 		$query = '
 			UPDATE fighter as ft
 			SET
-				ft.score = ('.Elo::INITIAL_SCORE.' + (SELECT SUM(fd.score_diff) FROM fightdetails as fd WHERE ft.id = fd.player_id AND fd.fight_id IN ('.implode(',', $activeFights).'))),
-				ft.fights = (SELECT COUNT(*) FROM fightdetails as fd WHERE ft.id = fd.player_id AND fd.fight_id IN ('.implode(',', $activeTrueFights).')),
-				ft.wins = (SELECT COUNT(*) FROM fightdetails as fd WHERE result = 1 AND ft.id = fd.player_id AND fd.fight_id IN ('.implode(',', $activeTrueFights).')),
-				ft.losts = (SELECT COUNT(*) FROM fightdetails as fd WHERE result = 0 AND ft.id = fd.player_id AND fd.fight_id IN ('.implode(',', $activeTrueFights).')),
-				ft.draws = (SELECT COUNT(*) FROM fightdetails as fd WHERE result = 0.5 AND ft.id = fd.player_id AND fd.fight_id IN ('.implode(',', $activeTrueFights).'))';
+				ft.score = ('.Elo::INITIAL_SCORE.' + (SELECT SUM(fd.score_diff) FROM fightdetails as fd WHERE ft.id = fd.fighter_id AND fd.fight_id IN ('.implode(',', $activeFights).'))),
+				ft.fights = (SELECT COUNT(*) FROM fightdetails as fd WHERE ft.id = fd.fighter_id AND fd.fight_id IN ('.implode(',', $activeTrueFights).')),
+				ft.wins = (SELECT COUNT(*) FROM fightdetails as fd WHERE result = 1 AND ft.id = fd.fighter_id AND fd.fight_id IN ('.implode(',', $activeTrueFights).')),
+				ft.losts = (SELECT COUNT(*) FROM fightdetails as fd WHERE result = 0 AND ft.id = fd.fighter_id AND fd.fight_id IN ('.implode(',', $activeTrueFights).')),
+				ft.draws = (SELECT COUNT(*) FROM fightdetails as fd WHERE result = 0.5 AND ft.id = fd.fighter_id AND fd.fight_id IN ('.implode(',', $activeTrueFights).'))';
 		R::exec($query);
 		R::exec('UPDATE fighter SET score = '.Elo::INITIAL_SCORE.' WHERE score IS NULL' );
 		die;
 	}
 
-	public static function top($number = 50) {
-		return R::find('fighter', ' fights > 0 ORDER BY score DESC limit '.$number);
+	public static function top($number = 150) {
+		$fighters = R::find('fighter', ' fights > 0 ORDER BY score DESC, name ASC limit '.$number);
+		$i = $rank = 1;
+		$prevScore = null;
+		foreach ($fighters as &$fighter) {
+			$rank = $prevScore === $fighter->score ? $rank : $i;
+			$prevScore = $fighter->score;
+			$i++;
+
+			$fighter->rank = $rank;
+		}
+		return $fighters;
 	}
 
 	public static function importAll() {

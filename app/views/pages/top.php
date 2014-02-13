@@ -10,19 +10,14 @@
 	</tr>
 	<?php
 	if (!empty($this->fighters)) {
-		$i = $rank = 1;
-		$prevScore = null;
 		foreach ($this->fighters as $key => $fighter) {
-			$diff = isset($this->ranks->diff[$key]) ? $this->ranks->diff[$key] : null;
-			$rank = $prevScore === $fighter->score ? $rank : $i;
-			$this->insert('elements/top-item', array('rank' => $rank, 'fighter' => $fighter, 'diff' => $diff));
-			$prevScore = $fighter->score;
-			$i++;
+			$fighter->diff = isset($this->ranks->diff[$fighter->id]) ? $this->ranks->diff[$fighter->id] : null;
+			$this->insert('elements/top-item', array('fighter' => $fighter));
 		}
 	}
 	?>
 </table>
 
 <div class="u-pullRight">
-	<?php $this->insert('elements/top-item-details', array('fighter' => $this->details)); ?>
+	<?php if (!empty($this->details)) $this->insert('elements/top-item-details', array('fighter' => $this->details)); ?>
 </div>
