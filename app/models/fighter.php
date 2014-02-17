@@ -38,7 +38,6 @@ class Model_Fighter extends RedBean_SimpleModel
 				ft.draws = (SELECT COUNT(*) FROM fightdetails as fd WHERE result = 0.5 AND ft.id = fd.fighter_id AND fd.fight_id IN ('.implode(',', $activeTrueFights).'))';
 		R::exec($query);
 		R::exec('UPDATE fighter SET score = '.Elo::INITIAL_SCORE.' WHERE score IS NULL' );
-		die;
 	}
 
 	public static function top($number = 150) {

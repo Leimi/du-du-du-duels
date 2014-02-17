@@ -26,12 +26,10 @@
 			<h2 class="header__title">
 				Who's the <em>best</em>?
 
-				<?php if (CURRENT === $this->app->urlFor('fight')): ?>
-					<a href="<?php echo $this->app->urlFor('top') ?>" class="header__subtitle">See the top</a>
-				<?php endif ?>
-
-				<?php if (CURRENT === $this->app->urlFor('top')): ?>
+				<?php if (CURRENT !== $this->app->urlFor('fight')): ?>
 					<a href="<?php echo $this->app->urlFor('fight') ?>" class="header__subtitle">Fight!</a>
+				<?php else: ?>
+					<a href="<?php echo $this->app->urlFor('top') ?>" class="header__subtitle">See the top</a>
 				<?php endif ?>
 			</h2>
 		</div>
