@@ -51,7 +51,7 @@
 		<script src="http://static.wowhead.com/widgets/power.js"></script>
 		<!-- dev : /js/script.js -->
 		<?php $this->js = PROD ? '/js/script.min.js?v=58797562341' :
-			array('/components/jquery/jquery.js', '/js/mousetooltip.js', '/js/script.js');
+			array('/components/jquery/dist/jquery.js', '/components/mousetooltip/mousetooltip.js', '/js/script.js');
 		$t = time();
 		if (is_string($this->js)): ?>
 		<script src="<?php echo $this->js ?>"></script>
