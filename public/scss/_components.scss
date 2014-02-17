@@ -1,9 +1,15 @@
+/**
+ * website title
+ */
 .website-title {
 	color: $brown;
 	font-family: $base-font-family;
 	font-size: $base-font-size;
 }
 
+/**
+ * big header (with a subtitle)
+ */
 .header {
 
 }
@@ -19,6 +25,10 @@
 			font-size: $base-font-size*1.2;
 		}
 
+
+/**
+ * text stuff
+ */
 .text--cool {
 	color: $green;
 }
@@ -31,6 +41,9 @@
 	color: $red;
 }
 
+/**
+ * hearthstone style button
+ */
 .hearthstone-button {
 	font-family: $serif;
 	color: $brown;
@@ -38,6 +51,9 @@
 	background: none;
 }
 
+/**
+ * cool boxes
+ */
 .box--green {
 	background: rgba($green, 0.1);
 	border-color: rgba(darken($green, 10%), 0.5);
@@ -53,10 +69,16 @@
 	border-color: rgba(darken($yellow, 10%), 0.5);
 }
 
+/**
+ * global transitions
+ */
 .transition {
 	transition: all 0.1s linear;
 }
 
+/**
+ * progressbars
+ */
 .progress {
 	height: 20px;
 	overflow: hidden;
@@ -94,6 +116,9 @@
 		background-color: $flat-red;
 	}
 
+/**
+ * rank arrows
+ */
 .rank {
 	font-weight: bold;
 	font-family: Georgia;
@@ -115,6 +140,9 @@
 	color: $flat-blue;
 }
 
+/**
+ * mouse tooltips ala wow
+ */
 .mouse-tooltip {
 	position: absolute;
 	top: 0;
@@ -141,3 +169,50 @@
 .mouse-tooltip--hidden {
 	display: none !important;
 }
+
+/**
+ * fighters
+ */
+.fighter {
+	border-radius: 3px;
+	padding: 30px 10px;
+	border: 1px solid transparent;
+	@extend .transition;
+}
+
+.fighter.fighter--winner {
+	@extend .box--green;
+}
+
+.fighter.fighter--details {
+	padding: 30px;
+	@extend .box--yellow;
+}
+
+.fighter--loser,
+.fighter--draw {
+	opacity: 0.6;
+}
+
+	.fighter__img-wrapper,
+	.fighter__more-info {
+		display: block;
+		text-align: center;
+	}
+
+	.fighter__img-wrapper {
+		overflow: hidden;
+		position: relative;
+		height: 434px;
+		line-height: 434px;
+	}
+
+		.fighter__img {
+			position: relative;
+			top: -36px;
+
+			&:active,
+			&:focus {
+				outline: none;
+			}
+		}

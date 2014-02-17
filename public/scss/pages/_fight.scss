@@ -4,55 +4,23 @@
 }
 
 	.fight__fighters {
+
 	}
 
-		.fighter,
+		.fight__fighters .fighter,
 		.fight__between {
 			display: inline-block;
 			vertical-align: middle;
 		}
 
-		.fighter {
-			border-radius: 3px;
-			padding: 30px 10px;
-			border: 1px solid transparent;
-			@extend .transition;
-		}
-
-		.fighter.fighter--winner {
-			@extend .box--green;
-		}
-
-		.fighter--loser,
-		.fighter.fighter--draw {
-			opacity: 0.6;
-		}
-
-			.fighter__img-wrapper,
-			.fighter__more-info
 			.fight__vs-wrapper,
 			.fight__draw {
-				display: block;
-				text-align: center;
+				@extend .fighter__more-info;
 			}
 
-			.fighter__img-wrapper,
 			.fight__vs-wrapper {
-				overflow: hidden;
-				position: relative;
-				height: 434px;
-				line-height: 434px;
+				@extend .fighter__img-wrapper;
 			}
-
-				.fighter__img {
-					position: relative;
-					top: -36px;
-
-					&:active,
-					&:focus {
-						outline: none;
-					}
-				}
 
 	.fight__between {
 
