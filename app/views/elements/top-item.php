@@ -1,4 +1,4 @@
-<tr>
+<tr class="top-item">
 
 	<td data-rank="<?php echo $this->fighter->rank ?>" data-score="<?php echo $this->fighter->score ?>" title="Score: <?php echo $this->fighter->score ?>"><?php echo $this->fighter->rank.'.' ?></td>
 
@@ -21,7 +21,11 @@
 	</td>
 
 	<td data-name="<?php echo $this->fighter->name ?>">
-		<a data-ajax-url="<?php echo $this->app->urlFor('details', array('id' => $this->fighter->id)) ?>" data-ajax-container=".details-container" href="<?php echo $this->app->urlFor('top', array('id' => $this->fighter->id)) ?>" style='background-image: url("<?php echo Halp::fighterImgPath($this->fighter, array('thumb' => true)); ?>")' class="top-item__name"><?php echo $this->fighter->name ?></a>
+		<span style='background-image: url("<?php echo Halp::fighterImgPath($this->fighter, array('thumb' => true)); ?>")' class="top-item__name">
+			<a data-ajax-url="<?php echo $this->app->urlFor('details', array('id' => $this->fighter->id)) ?>" data-ajax-container=".details-container" href="<?php echo $this->app->urlFor('top', array('id' => $this->fighter->id)) ?>" class="top-item__details-link">
+				<?php echo $this->fighter->name ?>
+			</a>
+		</span>
 	</td>
 
 </tr>

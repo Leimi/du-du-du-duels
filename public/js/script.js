@@ -38,7 +38,16 @@ var wowhead_tooltips = { "colorlinks": true, "iconizelinks": true, "renamelinks"
 		$.ajax({
 			url: $link.attr('data-ajax-url'),
 			success: function(result) {
+				result = $(result);
+
+				if ( $link.hasClass('top-item__details-link') ) {
+					var rank = $link.closest('.top-item').find('[data-rank]').attr('data-rank');
+					result.find('.fighter__rank-number').text(rank);
+				}
+
 				$( $link.attr('data-ajax-container') ).html(result);
+
+				window.history.pushState(null, "", $link.attr('href'));
 			},
 			error: function() {
 				window.location.href = $link.attr('href');

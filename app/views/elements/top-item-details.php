@@ -9,6 +9,14 @@
 			<a href="http://www.hearthhead.com/card=<?php echo $this->fighter->hhId ?>&amp;text" target="_blank"><?php echo $this->fighter->name ?></a>
 		</div>
 
+		<div class="fighter__rank">
+			<p>Ranked
+				<span class="fighter__rank-number">
+					<?php if (!empty($this->fighters)) echo $this->fighters[$this->fighter->id]->rank ?>
+				</span>
+			</p>
+		</div>
+
 		<ul class="fighter__history">
 			<?php foreach ($this->fighter->history as $history): ?>
 				<li class="fighter__history-item"><?php echo Halp::fightResult($history) ?></li>
